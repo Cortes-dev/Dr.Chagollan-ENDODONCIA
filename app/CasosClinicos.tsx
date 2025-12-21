@@ -214,18 +214,6 @@ const CasosClinicos = () => {
             Ver todas las reseñas en Google Maps
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
-
-          <div>
-            <p className="text-gray-600 mb-6 text-lg">
-              ¿Listo para tener una experiencia igual de satisfactoria?
-            </p>
-            <a 
-              href="tel:8787828610"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold rounded-xl shadow-xl shadow-red-900/30 transition-all duration-300 hover:shadow-2xl hover:shadow-red-900/50 hover:scale-105"
-            >
-              Agenda tu Consulta Ahora
-            </a>
-          </div>
         </div>
       </div>
     </section>

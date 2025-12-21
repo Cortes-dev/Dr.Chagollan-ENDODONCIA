@@ -66,9 +66,9 @@ const Contacto = () => {
     {
       icon: MapPin,
       title: "Ubicación",
-      content: "Acoros 250",
+      content: "Juárez 114, Zona Centro",
       subcontent: "Piedras Negras, Coahuila",
-      link: "https://maps.google.com/?q=Acoros+250+Piedras+Negras",
+      link: "https://maps.app.goo.gl/rjBjxG5aPPPYFYnN7",
     },
     {
       icon: Phone,
@@ -80,9 +80,9 @@ const Contacto = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "contacto@drchagollan.com",
+      content: "dr.enriquechagollanendodoncia@gmail.com",
       subcontent: "Respuesta en 24hrs",
-      link: "mailto:contacto@drchagollan.com",
+      link: "mailto:dr.enriquechagollanendodoncia@gmail.com",
     },
     {
       icon: Clock,
