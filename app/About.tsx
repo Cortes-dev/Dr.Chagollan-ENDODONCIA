@@ -66,7 +66,7 @@ const About = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/images/team.png"
+                src="/images/equipo.jpeg"
                 alt="Equipo Dr. Chagollán - Especialistas en Endodoncia"
                 className="w-full h-auto object-cover"
                 onError={(e) => {
