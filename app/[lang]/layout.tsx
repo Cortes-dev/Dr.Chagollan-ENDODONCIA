@@ -35,13 +35,13 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { lang }
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
   params: { lang: string };
-}>) {
-  // Obtener los mensajes de traducción
-  const messages = await getMessages();
+}) {
+  const { lang } = params;
+  const messages = await getMessages({ locale: lang });
 
   return (
     <html lang={lang}>
