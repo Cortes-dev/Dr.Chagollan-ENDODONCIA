@@ -8,7 +8,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 import { useTransition, useEffect } from "react";
 
-const PHONE_NUMBER = "+52XXXXXXXXXX";
+const PHONE_NUMBER = "+528787828610";
 
 const NavLink = memo(
   ({
@@ -46,10 +46,12 @@ const CTAButton = memo(
     className = "",
     mobile = false,
     onClick,
+    label,
   }: {
     className?: string;
     mobile?: boolean;
     onClick?: () => void;
+    label: string;
   }) => (
     <a
       href={`tel:${PHONE_NUMBER}`}
@@ -59,7 +61,7 @@ const CTAButton = memo(
       } ${mobile ? "w-full text-base" : ""} ${className}`}
     >
       <Phone className="w-5 h-5" />
-      <span>{mobile ? "Agendar Cita" : "Agendar Cita"}</span>
+      <span>{label}</span>
     </a>
   )
 );
@@ -226,19 +228,20 @@ const Navbar = () => {
 
           {/* Menú desktop */}
           <div className="hidden md:flex items-center space-x-1">
-            <NavLink href="" label={t("home.label")} />
+            <NavLink href="/" label={t("home.label")} />
             <NavLink href={t("services.href")} label={t("services.label")} />
             <NavLink
               href={t("testimonials.href")}
               label={t("testimonials.label")}
             />
+            <NavLink href={t("about.href")} label={t("about.label")} />
             <NavLink href={t("contact.href")} label={t("contact.label")} />
           </div>
 
           {/* CTA + Selector de idioma Desktop */}
           <div className="hidden md:flex items-center gap-4">
             <LocaleSwitcherDesktop />
-            <CTAButton />
+            <CTAButton label={t("cta")} />
           </div>
 
           {/* Botón menú móvil */}
@@ -261,13 +264,16 @@ const Navbar = () => {
         aria-hidden={!isOpen}
       >
         <div className="px-4 pt-2 pb-6 space-y-1 bg-white border-t border-gray-200 shadow-inner">
-          <NavLink href="" label={t("home.label")} />
-          <NavLink href={t("services.href")} label={t("services.label")} />
+          <NavLink href="/" label={t("home.label")} onClick={closeMenu} mobile />
+          <NavLink href={t("services.href")} label={t("services.label")} onClick={closeMenu} mobile />
           <NavLink
             href={t("testimonials.href")}
             label={t("testimonials.label")}
+            onClick={closeMenu}
+            mobile
           />
-          <NavLink href={t("contact.href")} label={t("contact.label")} />
+          <NavLink href={t("about.href")} label={t("about.label")} onClick={closeMenu} mobile />
+          <NavLink href={t("contact.href")} label={t("contact.label")} onClick={closeMenu} mobile />
 
           {/* Selector de idioma móvil */}
           <div className="pt-4 pb-2">
@@ -276,7 +282,7 @@ const Navbar = () => {
 
           {/* CTA móvil */}
           <div className="pt-2">
-            <CTAButton mobile onClick={closeMenu} />
+            <CTAButton mobile onClick={closeMenu} label={t("cta")} />
           </div>
         </div>
       </div>

@@ -12,6 +12,10 @@
       "label": "Testimonials",
       "href": "#testimonio"
     },
+    "about": {
+      "label": "About Us",
+      "href": "#about"
+    },
     "contact": {
       "label": "Contact",
       "href": "#contact"
