@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_MX",
   },
+  icons: {
+    icon: "/images/logo-chagollan.png",
+  },
 };
 
 export default async function RootLayout({
