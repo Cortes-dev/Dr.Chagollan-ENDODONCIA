@@ -1,0 +1,344 @@
+{
+  "navbar-home": {
+    "home": {
+      "label": "Home",
+      "href": "/"
+    },
+    "services": {
+      "label": "Services",
+      "href": "#services"
+    },
+    "testimonials": {
+      "label": "Testimonials",
+      "href": "#testimonio"
+    },
+    "contact": {
+      "label": "Contact",
+      "href": "#contact"
+    },
+    "cta": "Schedule Appointment"
+  },
+  "header": {
+    "etiqueta": "Certified Endodontics Specialist",
+    "title": "Save your teeth <highlight>pain-free</highlight> with cutting-edge technology",
+    "description": "with 14 years of experience saving smiles. Precise, painless root canal treatments using the most advanced endodontic technology.",
+    "item-card": {
+      "icon-1": "Zap",
+      "title-1": "Pain-Free",
+      "description-1": "Effective anesthesia",
+      "icon-2": "Microscope",
+      "title-2": "Technology",
+      "description-2": "State-of-the-art equipment",
+      "icon-3": "Heart",
+      "title-3": "Personalized",
+      "description-3": "Unique care"
+    },
+    "cta": {
+      "call": "Schedule Appointment",
+      "services": "Learn About Treatments",
+      "phone": "tel:8787828610"
+    },
+    "stats": {
+      "patients": {
+        "value": "600+",
+        "label": "Patients/Year"
+      },
+      "experience": {
+        "value": "14",
+        "label": "Years of Experience"
+      },
+      "dedication": {
+        "value": "100%",
+        "label": "Dedication"
+      }
+    },
+    "floating-card": {
+      "title": "Certified",
+      "description": "Official Specialist"
+    },
+    "buttons-header": {
+      "agendar": "Schedule Appointment",
+      "conocer": "Learn About Treatments"
+    }
+  },
+  "services-section": {
+    "header": {
+      "badge": "Specialized Services",
+      "title": "<highlight>Endodontics</highlight> Treatments",
+      "description": "We offer a full range of endodontic services with the latest technology to ensure the best outcome in every treatment."
+    },
+    "items": [
+      {
+        "id": 1,
+        "icon": "Microscope",
+        "title": "Endodontics",
+        "subtitle": "Root Canal Treatment",
+        "description": "We save damaged teeth by removing infected pulp and sealing the root canal. Painless procedure with cutting-edge technology.",
+        "features": ["Pain-free", "One or two sessions", "Digital technology"]
+      },
+      {
+        "id": 2,
+        "icon": "Shield",
+        "title": "Apexification",
+        "subtitle": "For Developing Teeth",
+        "description": "Specialized treatment for young permanent teeth with incomplete roots, promoting natural apical closure.",
+        "features": [
+          "Children and adolescents",
+          "Preserves vitality",
+          "Ongoing follow-up"
+        ]
+      },
+      {
+        "id": 3,
+        "icon": "RefreshCw",
+        "title": "Dental Revascularization",
+        "subtitle": "Biological Regeneration",
+        "description": "Regenerative technique that revitalizes necrotic teeth in young patients, restoring pulpal function.",
+        "features": [
+          "Innovative procedure",
+          "Tissue regeneration",
+          "Natural results"
+        ]
+      },
+      {
+        "id": 4,
+        "icon": "Sparkles",
+        "title": "Internal Bleaching",
+        "subtitle": "Darkened Teeth",
+        "description": "Specialized aesthetic treatment to lighten teeth that have darkened after root canal therapy.",
+        "features": ["Visible results", "Non-invasive", "Restores aesthetics"]
+      },
+      {
+        "id": 5,
+        "icon": "RefreshCw",
+        "title": "Retreatment",
+        "subtitle": "Second Chance",
+        "description": "When a previous treatment was unsuccessful, we perform endodontic retreatment to definitively save the tooth.",
+        "features": [
+          "Definitive solution",
+          "Thorough evaluation",
+          "High success rate"
+        ]
+      },
+      {
+        "id": 6,
+        "icon": "Camera",
+        "title": "Digital Radiography",
+        "subtitle": "Accurate Diagnosis",
+        "description": "Advanced imaging technology for precise diagnoses with less radiation and immediate results.",
+        "features": [
+          "Lower radiation",
+          "Instant results",
+          "Greater accuracy"
+        ]
+      }
+    ],
+    "cta-final": {
+      "title": "Not sure which treatment you need?",
+      "description": "Schedule a consultation and we'll help you find the best solution",
+      "button": {
+        "text": "Free Consultation",
+        "phone": "tel:8787828610"
+      }
+    }
+  },
+  "testimonios-section": {
+    "header": {
+      "badge": "What our patients say",
+      "title": "Real <highlight>Testimonials</highlight>",
+      "rating": {
+        "value": "4.9",
+        "label": "out of 5 stars",
+        "reviews": "Based on <highlight>74 reviews</highlight> on Google"
+      }
+    },
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Alison Vera Jimenez",
+        "rating": 5,
+        "comentario": "Excellent care from Dr. and his staff. The procedure was not painful at all. He also conveys a lot of calm to the patient throughout. 🤗…",
+        "fecha": "1 month ago"
+      },
+      {
+        "id": 2,
+        "nombre": "Marcos Becerra",
+        "rating": 5,
+        "comentario": "Excellent service and care from a very friendly team that leaves no doubts about your treatment. Doctor Chagollan, with true ethics and vocation, performed his work so professionally that I felt relaxed and comfortable; I experienced no pain during or after the treatment.",
+        "fecha": "5 months ago"
+      },
+      {
+        "id": 3,
+        "nombre": "Ana Martínez",
+        "rating": 5,
+        "comentario": "Ethical and professional. The Doc was great and helped me with my poorly done endodontics by another doctor in Acuña, Coah. He performed a retreatment and showed me via X-ray the change in my roots that hadn't been properly treated. His medical assistants are very kind and helpful! I'm from Sterling City, Texas, and I have great faith in Dr. Enrique!",
+        "fecha": "3 months ago"
+      },
+      {
+        "id": 4,
+        "nombre": "Juanita Velazquez",
+        "rating": 5,
+        "comentario": "Very kind, and I think I could see the good work of Dr. Enrique Chagollan on my son's face... we are very satisfied, excellent doctor who knows his job",
+        "fecha": "1 year ago"
+      },
+      {
+        "id": 5,
+        "nombre": "Julissa Lucero",
+        "rating": 5,
+        "comentario": "Very professional, I loved my experience even though I'm a bit nervous 😅. Everything very clean, the staff very friendly and kind! And Doctor Enrique is great and explains everything very well about what needs to be done!",
+        "fecha": "2 months ago"
+      }
+    ],
+    "cta-final": {
+      "text": "View all reviews on Google Maps",
+      "url": "https://www.google.com/maps/place/Doctor+Enrique+Chagollan+Endodoncista/@28.7054746,-100.5220217,17z/data=!4m8!3m7!1s0x865f8d127e14dff7:0xda398f2bd806eeca!8m2!3d28.7054699!4d-100.5194468!9m1!1b1!16s%2Fg%2F11g2qmdn8z?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  "about-section": {
+    "header": {
+      "badge": "Our Team",
+      "title": "About <highlight>Us</highlight>",
+      "description": "A team dedicated to preserving your natural smile with experience, technology, and human warmth"
+    },
+    "main": {
+      "lead": "A Team Committed to Your Dental Health",
+      "paragraphs": [
+        "Under the leadership of <highlight>Dr. Enrique Alejandro Chagollán Benavides</highlight>, a certified endodontics specialist with over 14 years of experience, our team is dedicated to providing the highest quality treatments.",
+        "Every member of our team is highly trained and shares our vision: to make each visit a positive experience where the patient feels comfortable, informed, and confident they are receiving the best possible care.",
+        "We combine years of experience with cutting-edge technology, including dental microscopy, digital radiography, and minimally invasive techniques to ensure exceptional results and virtually painless procedures."
+      ],
+      "features": [
+        {
+          "icon": "Microscope",
+          "title": "Advanced Technology",
+          "description": "State-of-the-art equipment"
+        },
+        {
+          "icon": "Heart",
+          "title": "Personalized Care",
+          "description": "Each patient is unique"
+        }
+      ]
+    },
+    "stats": [
+      { "icon": "Clock", "number": "14+", "label": "Years of Experience" },
+      { "icon": "Users", "number": "600+", "label": "Patients per Year" },
+      { "icon": "Target", "number": "98%", "label": "Success Rate" },
+      { "icon": "Microscope", "number": "100%", "label": "Digital Technology" }
+    ],
+    "values": [
+      {
+        "icon": "Heart",
+        "title": "Empathy",
+        "description": "We understand dental anxiety and work to create an environment of trust and calm."
+      },
+      {
+        "icon": "Award",
+        "title": "Excellence",
+        "description": "We commit to the highest standards of quality in every procedure."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Innovation",
+        "description": "We use the latest technology to deliver the best results."
+      },
+      {
+        "icon": "Shield",
+        "title": "Trust",
+        "description": "We build lasting relationships based on transparency and professionalism."
+      }
+    ],
+    "cta": {
+      "title": "Ready to meet us?",
+      "description": "Schedule your consultation and discover why over 600 patients a year trust us",
+      "button": { "text": "Schedule Your Appointment Now", "url": "tel:8787828610" }
+    }
+  },
+  "contact-section": {
+    "header": {
+      "badge": "We're here to help you",
+      "title": "Schedule Your <highlight>Consultation</highlight>",
+      "description": "Fill out the form and we'll contact you via WhatsApp"
+    },
+    "info": [
+      {
+        "icon": "MapPin",
+        "title": "Location",
+        "content": "Juárez 114, Downtown",
+        "subcontent": "Piedras Negras, Coahuila",
+        "link": "https://maps.app.goo.gl/rjBjxG5aPPPYFYnN7"
+      },
+      {
+        "icon": "Phone",
+        "title": "Phone",
+        "content": "878 782 8610",
+        "subcontent": "Calls and WhatsApp",
+        "link": "tel:8787828610"
+      },
+      {
+        "icon": "Mail",
+        "title": "Email",
+        "content": "dr.enriquechagollanendodoncia@gmail.com",
+        "subcontent": "Response within 24 hours",
+        "link": "mailto:dr.enriquechagollanendodoncia@gmail.com"
+      },
+      {
+        "icon": "Clock",
+        "title": "Hours",
+        "content": "Mon - Fri: 9:00 - 18:00",
+        "subcontent": "Sat: 9:00 - 14:00",
+        "link": null
+      }
+    ],
+    "emergencyCTA": {
+      "title": "Do you have an Emergency?",
+      "description": "Call us directly for immediate attention",
+      "button": {
+        "text": "Call Now",
+        "icon": "Phone",
+        "link": "tel:8787828610"
+      }
+    },
+    "form": {
+      "fields": {
+        "nombre": {
+          "label": "Full Name",
+          "placeholder": "E.g., John Doe",
+          "required": true
+        },
+        "telefono": {
+          "label": "Phone",
+          "placeholder": "878 123 4567",
+          "required": true
+        },
+        "servicio": {
+          "label": "Reason for Consultation",
+          "placeholder": "Select the reason for your consultation",
+          "required": true,
+          "options": [
+            "Dental Pain",
+            "Root Canal Treatment (Endodontics)",
+            "Root Canal Retreatment",
+            "Apexification",
+            "Dental Revascularization",
+            "Internal Bleaching",
+            "Infection Evaluation",
+            "Dental Trauma",
+            "Second Opinion",
+            "General Consultation",
+            "Other"
+          ]
+        },
+        "mensaje": {
+          "label": "Additional Message",
+          "placeholder": "Briefly describe your symptoms or the reason for your consultation..."
+        }
+      },
+      "submit": {
+        "text": "Send via WhatsApp",
+        "icon": "Send",
+        "note": "Upon submitting the form, you will be redirected to WhatsApp to complete your request"
+      }
+    }
+  }
+}

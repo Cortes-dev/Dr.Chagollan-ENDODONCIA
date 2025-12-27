@@ -2,8 +2,20 @@
 
 import { useState } from "react";
 import { Phone, MapPin, Mail, Clock, Send, MessageCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+const iconMap: Record<string, any> = {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Send,
+  MessageCircle
+};
 
 const Contacto = () => {
+  const t = useTranslations("contact-section");
+
   const [formData, setFormData] = useState({
     nombre: "",
     telefono: "",
@@ -48,50 +60,21 @@ const Contacto = () => {
     });
   };
 
-  const servicios = [
-    "Dolor Dental",
-    "Tratamiento de Conducto (Endodoncia)",
-    "Retratamiento de Conducto",
-    "Apicoformación",
-    "Revascularización Dental",
-    "Blanqueamiento Interno",
-    "Evaluación de Infección",
-    "Trauma Dental",
-    "Segunda Opinión",
-    "Consulta General",
-    "Otro",
-  ];
+  // Servicios dinámicos desde i18n
+  const serviciosCount = 11;
+  const servicios = Array.from({ length: serviciosCount }, (_, i) => 
+    t(`form.fields.servicio.options.${i}`)
+  );
 
-  const infoContacto = [
-    {
-      icon: MapPin,
-      title: "Ubicación",
-      content: "Juárez 114, Zona Centro",
-      subcontent: "Piedras Negras, Coahuila",
-      link: "https://maps.app.goo.gl/rjBjxG5aPPPYFYnN7",
-    },
-    {
-      icon: Phone,
-      title: "Teléfono",
-      content: "878 782 8610",
-      subcontent: "Llamadas y WhatsApp",
-      link: "tel:8787828610",
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      content: "dr.enriquechagollanendodoncia@gmail.com",
-      subcontent: "Respuesta en 24hrs",
-      link: "mailto:dr.enriquechagollanendodoncia@gmail.com",
-    },
-    {
-      icon: Clock,
-      title: "Horarios",
-      content: "Lun - Vie: 9:00 - 18:00",
-      subcontent: "Sáb: 9:00 - 14:00",
-      link: null,
-    },
-  ];
+  // Información de contacto dinámica desde i18n
+  const infoCount = 4;
+  const infoContacto = Array.from({ length: infoCount }, (_, i) => ({
+    icon: iconMap[t(`info.${i}.icon`)],
+    title: t(`info.${i}.title`),
+    content: t(`info.${i}.content`),
+    subcontent: t(`info.${i}.subcontent`),
+    link: t(`info.${i}.link`) === 'null' ? null : t(`info.${i}.link`)
+  }));
 
   return (
     <section
@@ -107,19 +90,21 @@ const Contacto = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full text-red-700 font-medium text-sm mb-6">
             <MessageCircle className="w-4 h-4" />
-            Estamos aquí para ayudarte
+            {t("header.badge")}
           </div>
 
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Agenda tu{" "}
-            <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
-              Consulta
-            </span>
+            {t.rich("header.title", {
+              highlight: (chunks) => (
+                <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
+                  {chunks}
+                </span>
+              )
+            })}
           </h2>
 
           <p className="text-lg text-gray-600">
-            Completa el formulario y nos pondremos en contacto contigo vía
-            WhatsApp
+            {t("header.description")}
           </p>
         </div>
 
@@ -192,17 +177,17 @@ const Contacto = () => {
             {/* CTA de llamada directa */}
             <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-xl p-6 text-white">
               <h4 className="font-bold text-lg mb-2">
-                ¿Tienes una Emergencia?
+                {t("emergencyCTA.title")}
               </h4>
               <p className="text-red-100 text-sm mb-4">
-                Llámanos directamente para atención inmediata
+                {t("emergencyCTA.description")}
               </p>
               <a
-                href="tel:8787828610"
+                href={t("emergencyCTA.button.link")}
                 className="flex items-center justify-center gap-2 w-full bg-white hover:bg-gray-50 text-red-600 font-bold py-3 px-4 rounded-lg transition-all duration-300 hover:scale-105"
               >
                 <Phone className="w-5 h-5" />
-                Llamar Ahora
+                {t("emergencyCTA.button.text")}
               </a>
             </div>
           </div>
@@ -214,14 +199,14 @@ const Contacto = () => {
                 Envíanos un Mensaje
               </h3>
 
-              <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Nombre */}
                 <div>
                   <label
                     htmlFor="nombre"
                     className="block text-gray-700 font-semibold mb-2"
                   >
-                    Nombre Completo <span className="text-red-600">*</span>
+                    {t("form.fields.nombre.label")} <span className="text-red-600">*</span>
                   </label>
                   <input
                     type="text"
@@ -231,7 +216,7 @@ const Contacto = () => {
                     value={formData.nombre}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-red-600 focus:bg-white transition-all"
-                    placeholder="Ej: Juan Pérez"
+                    placeholder={t("form.fields.nombre.placeholder")}
                   />
                 </div>
 
@@ -241,7 +226,7 @@ const Contacto = () => {
                     htmlFor="telefono"
                     className="block text-gray-700 font-semibold mb-2"
                   >
-                    Teléfono <span className="text-red-600">*</span>
+                    {t("form.fields.telefono.label")} <span className="text-red-600">*</span>
                   </label>
                   <input
                     type="tel"
@@ -251,7 +236,7 @@ const Contacto = () => {
                     value={formData.telefono}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-red-600 focus:bg-white transition-all"
-                    placeholder="878 123 4567"
+                    placeholder={t("form.fields.telefono.placeholder")}
                   />
                 </div>
 
@@ -261,7 +246,7 @@ const Contacto = () => {
                     htmlFor="servicio"
                     className="block text-gray-700 font-semibold mb-2"
                   >
-                    Motivo de Consulta <span className="text-red-600">*</span>
+                    {t("form.fields.servicio.label")} <span className="text-red-600">*</span>
                   </label>
                   <select
                     id="servicio"
@@ -272,7 +257,7 @@ const Contacto = () => {
                     className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-red-600 focus:bg-white transition-all appearance-none cursor-pointer"
                   >
                     <option value="">
-                      Selecciona el motivo de tu consulta
+                      {t("form.fields.servicio.placeholder")}
                     </option>
                     {servicios.map((servicio, index) => (
                       <option key={index} value={servicio}>
@@ -288,7 +273,7 @@ const Contacto = () => {
                     htmlFor="mensaje"
                     className="block text-gray-700 font-semibold mb-2"
                   >
-                    Mensaje Adicional
+                    {t("form.fields.mensaje.label")}
                   </label>
                   <textarea
                     id="mensaje"
@@ -297,24 +282,23 @@ const Contacto = () => {
                     value={formData.mensaje}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:border-red-600 focus:bg-white transition-all resize-none"
-                    placeholder="Describe brevemente tus síntomas o el motivo de tu consulta..."
+                    placeholder={t("form.fields.mensaje.placeholder")}
                   ></textarea>
                 </div>
 
                 {/* Botón */}
                 <button
-                  onClick={handleSubmit}
+                  type="submit"
                   className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3 shadow-xl shadow-red-900/30 hover:shadow-2xl hover:shadow-red-900/50"
                 >
                   <Send className="w-5 h-5" />
-                  Enviar por WhatsApp
+                  {t("form.submit.text")}
                 </button>
 
                 <p className="text-gray-500 text-sm text-center">
-                  Al enviar el formulario serás redirigido a WhatsApp para
-                  completar tu solicitud
+                  {t("form.submit.note")}
                 </p>
-              </div>
+              </form>
             </div>
           </div>
         </div>

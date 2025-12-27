@@ -1,0 +1,348 @@
+{
+  "navbar-home": {
+    "home": {
+      "label": "Inicio",
+      "href": "/"
+    },
+    "services": {
+      "label": "Servicios",
+      "href": "#services"
+    },
+    "testimonials": {
+      "label": "Testimonios",
+      "href": "#testimonio"
+    },
+    "contact": {
+      "label": "Contacto",
+      "href": "#contact"
+    },
+    "cta": "Agendar Cita"
+  },
+  "header": {
+    "etiqueta": "Especialista Certificado en Endodoncia",
+    "title": "Salva tus dientes <highlight>sin dolor</highlight> con tecnología de punta",
+    "description": "con 14 años de experiencia salvando sonrisas. Tratamientos de conducto precisos, indoloros y con la más avanzada tecnología endodóntica.",
+    "item-card": {
+      "icon-1": "Zap",
+      "title-1": "Sin Dolor",
+      "description-1": "Anestesia efectiva",
+      "icon-2": "Microscope",
+      "title-2": "Tecnología",
+      "description-2": "Equipo de punta",
+      "icon-3": "Heart",
+      "title-3": "Personalizado",
+      "description-3": "Atención única"
+    },
+    "cta": {
+      "call": "Agendar Consulta",
+      "services": "Conocer Tratamientos",
+      "phone": "tel:8787828610"
+    },
+    "stats": {
+      "patients": {
+        "value": "600+",
+        "label": "Pacientes/Año"
+      },
+      "experience": {
+        "value": "14",
+        "label": "Años Experiencia"
+      },
+      "dedication": {
+        "value": "100%",
+        "label": "Dedicación"
+      }
+    },
+    "floating-card": {
+      "title": "Certificado",
+      "description": "Especialista oficial"
+    },
+    "buttons-header": {
+      "agendar": "Agendar Consulta",
+      "conocer": "Conocer Tratamientos"
+    }
+  },
+  "services-section": {
+    "header": {
+      "badge": "Servicios Especializados",
+      "title": "Tratamientos de <highlight>Endodoncia</highlight>",
+      "description": "Ofrecemos una gama completa de servicios endodónticos con tecnología de última generación para garantizar el mejor resultado en cada tratamiento."
+    },
+    "items": [
+      {
+        "id": 1,
+        "icon": "Microscope",
+        "title": "Endodoncia",
+        "subtitle": "Tratamiento de Conducto",
+        "description": "Salvamos dientes dañados eliminando la pulpa infectada y sellando el conducto radicular. Procedimiento indoloro con tecnología de punta.",
+        "features": ["Sin dolor", "Una o dos sesiones", "Tecnología digital"]
+      },
+      {
+        "id": 2,
+        "icon": "Shield",
+        "title": "Apicoformación",
+        "subtitle": "Para Dientes en Desarrollo",
+        "description": "Tratamiento especializado para dientes permanentes jóvenes con raíces incompletas, promoviendo el cierre apical natural.",
+        "features": [
+          "Niños y adolescentes",
+          "Preserva vitalidad",
+          "Seguimiento continuo"
+        ]
+      },
+      {
+        "id": 3,
+        "icon": "RefreshCw",
+        "title": "Revascularización Dental",
+        "subtitle": "Regeneración Biológica",
+        "description": "Técnica regenerativa que permite la revitalización de dientes necróticos en pacientes jóvenes, restaurando la función pulpar.",
+        "features": [
+          "Procedimiento innovador",
+          "Regeneración tisular",
+          "Resultados naturales"
+        ]
+      },
+      {
+        "id": 4,
+        "icon": "Sparkles",
+        "title": "Blanqueamiento Interno",
+        "subtitle": "Dientes Oscurecidos",
+        "description": "Tratamiento estético especializado para aclarar dientes que han oscurecido tras un tratamiento de conducto.",
+        "features": ["Resultados visibles", "No invasivo", "Recupera estética"]
+      },
+      {
+        "id": 5,
+        "icon": "RefreshCw",
+        "title": "Retratamiento",
+        "subtitle": "Segunda Oportunidad",
+        "description": "Cuando un tratamiento previo no fue exitoso, realizamos retratamiento endodóntico para salvar el diente definitivamente.",
+        "features": [
+          "Solución definitiva",
+          "Evaluación exhaustiva",
+          "Alta tasa de éxito"
+        ]
+      },
+      {
+        "id": 6,
+        "icon": "Camera",
+        "title": "Radiografía Digital",
+        "subtitle": "Diagnóstico Preciso",
+        "description": "Tecnología de imagen avanzada para diagnósticos exactos con menor radiación y resultados inmediatos.",
+        "features": [
+          "Menor radiación",
+          "Resultados instantáneos",
+          "Mayor precisión"
+        ]
+      }
+    ],
+    "cta-final": {
+      "title": "¿No estás seguro qué tratamiento necesitas?",
+      "description": "Agenda una consulta y te ayudaremos a encontrar la mejor solución",
+      "button": {
+        "text": "Consulta Gratuita",
+        "phone": "tel:8787828610"
+      }
+    }
+  },
+  "testimonios-section": {
+    "header": {
+      "badge": "Lo que dicen nuestros pacientes",
+      "title": "Testimonios <highlight>Reales</highlight>",
+      "rating": {
+        "value": "4.9",
+        "label": "de 5 estrellas",
+        "reviews": "Basado en <highlight>74 opiniones</highlight> en Google"
+      }
+    },
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Alison Vera Jimenez",
+        "rating": 5,
+        "comentario": "Excelente atención por parte del Dr. Y por parte de su personal. El procedimiento no fue para nada doloroso. Además, en todo momento transmite mucha calma al paciente. 🤗…",
+        "fecha": "Hace 1 meses"
+      },
+      {
+        "id": 2,
+        "nombre": "Marcos Becerra",
+        "rating": 5,
+        "comentario": "Excelente servicio y atención con un equipo muy amable, que te deja sin ninguna duda referente a tu tratamiento a realizar, el Doctor Chagollan con verdadera ética y vocacion  realizó su trabajo tan profesional que me sentí tan relajado y comfortable , no experimente dolor alguno durante el proceso ni despues del tratamiento.",
+        "fecha": "Hace 5 meses"
+      },
+      {
+        "id": 3,
+        "nombre": "Ana Martínez",
+        "rating": 5,
+        "comentario": "Ético y profesional y se porta super bien el Doc me ayudo con mi problema de endodoncia mal hecho por otro dr de acuña coah. Me realizó retratamiento y me mostró por radiografía el cambio de mis raíces que no las habían bajado bien. Sus asistentes medicas muy lindas y serviciales! Soy de la ciudad Sterling Texas le doy mucha fé al dr Enrique!",
+        "fecha": "Hace 3 meses"
+      },
+      {
+        "id": 4,
+        "nombre": "Juanita Velazquez",
+        "rating": 5,
+        "comentario": "Muy amables , y creo que en la cara de mi hijo pude ver el buen trabajo del Dr Enrique Chagollan ...estamos muy satisfechos muy buen dr sabe hacer su trabajo",
+        "fecha": "Hace 1 año"
+      },
+      {
+        "id": 5,
+        "nombre": "Julissa Lucero",
+        "rating": 5,
+        "comentario": "Muy profesional, me encanto mi experiencia y eso que soy algo nerviosa 😅, Muy limpio todo, el personal muy amables muy lindas! Y el Doctor Enrique muy buena gente y te explica todo muy bien en lo que se necesita que hacer!",
+        "fecha": "Hace 2 meses"
+      }
+    ],
+    "cta-final": {
+      "text": "Ver todas las reseñas en Google Maps",
+      "url": "https://www.google.com/maps/place/Doctor+Enrique+Chagollan+Endodoncista/@28.7054746,-100.5220217,17z/data=!4m8!3m7!1s0x865f8d127e14dff7:0xda398f2bd806eeca!8m2!3d28.7054699!4d-100.5194468!9m1!1b1!16s%2Fg%2F11g2qmdn8z?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+    }
+  },
+  "about-section": {
+    "header": {
+      "badge": "Nuestro Equipo",
+      "title": "Acerca de <highlight>Nosotros</highlight>",
+      "description": "Un equipo dedicado a preservar tu sonrisa natural con experiencia, tecnología y calidez humana"
+    },
+    "main": {
+      "lead": "Un Equipo Comprometido con tu Salud Dental",
+      "paragraphs": [
+        "Bajo el liderazgo del <highlight>Dr. Enrique Alejandro Chagollán Benavides</highlight>, especialista certificado en endodoncia con más de 14 años de experiencia, nuestro equipo se dedica a ofrecer tratamientos de la más alta calidad.",
+        "Cada miembro de nuestro equipo está altamente capacitado y comparte nuestra visión: hacer que cada visita sea una experiencia positiva, donde el paciente se sienta cómodo, informado y seguro de que está recibiendo el mejor cuidado posible.",
+        "Combinamos años de experiencia con tecnología de última generación, incluyendo microscopía dental, radiografía digital y técnicas mínimamente invasivas para garantizar resultados excepcionales y procedimientos prácticamente indoloros."
+      ],
+      "features": [
+        {
+          "icon": "Microscope",
+          "title": "Tecnología Avanzada",
+          "description": "Equipos de última generación"
+        },
+        {
+          "icon": "Heart",
+          "title": "Atención Personalizada",
+          "description": "Cada paciente es único"
+        }
+      ]
+    },
+    "stats": [
+      { "icon": "Clock", "number": "14+", "label": "Años de Experiencia" },
+      { "icon": "Users", "number": "600+", "label": "Pacientes por Año" },
+      { "icon": "Target", "number": "98%", "label": "Tasa de Éxito" },
+      {
+        "icon": "Microscope",
+        "number": "100%",
+        "label": "Tecnología Digital"
+      }
+    ],
+    "values": [
+      {
+        "icon": "Heart",
+        "title": "Empatía",
+        "description": "Entendemos el miedo dental y trabajamos para crear un ambiente de confianza y tranquilidad."
+      },
+      {
+        "icon": "Award",
+        "title": "Excelencia",
+        "description": "Nos comprometemos con los más altos estándares de calidad en cada procedimiento."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Innovación",
+        "description": "Utilizamos tecnología de última generación para ofrecer los mejores resultados."
+      },
+      {
+        "icon": "Shield",
+        "title": "Confianza",
+        "description": "Construimos relaciones duraderas basadas en la transparencia y profesionalismo."
+      }
+    ],
+    "cta": {
+      "title": "¿Listo para conocernos?",
+      "description": "Agenda tu consulta y descubre por qué más de 600 pacientes al año confían en nosotros",
+      "button": { "text": "Agenda tu Cita Ahora", "url": "tel:8787828610" }
+    }
+  },
+  "contact-section": {
+    "header": {
+      "badge": "Estamos aquí para ayudarte",
+      "title": "Agenda tu <highlight>Consulta</highlight>",
+      "description": "Completa el formulario y nos pondremos en contacto contigo vía WhatsApp"
+    },
+    "info": [
+      {
+        "icon": "MapPin",
+        "title": "Ubicación",
+        "content": "Juárez 114, Zona Centro",
+        "subcontent": "Piedras Negras, Coahuila",
+        "link": "https://maps.app.goo.gl/rjBjxG5aPPPYFYnN7"
+      },
+      {
+        "icon": "Phone",
+        "title": "Teléfono",
+        "content": "878 782 8610",
+        "subcontent": "Llamadas y WhatsApp",
+        "link": "tel:8787828610"
+      },
+      {
+        "icon": "Mail",
+        "title": "Email",
+        "content": "dr.enriquechagollanendodoncia@gmail.com",
+        "subcontent": "Respuesta en 24hrs",
+        "link": "mailto:dr.enriquechagollanendodoncia@gmail.com"
+      },
+      {
+        "icon": "Clock",
+        "title": "Horarios",
+        "content": "Lun - Vie: 9:00 - 18:00",
+        "subcontent": "Sáb: 9:00 - 14:00",
+        "link": null
+      }
+    ],
+    "emergencyCTA": {
+      "title": "¿Tienes una Emergencia?",
+      "description": "Llámanos directamente para atención inmediata",
+      "button": {
+        "text": "Llamar Ahora",
+        "icon": "Phone",
+        "link": "tel:8787828610"
+      }
+    },
+    "form": {
+      "fields": {
+        "nombre": {
+          "label": "Nombre Completo",
+          "placeholder": "Ej: Juan Pérez",
+          "required": true
+        },
+        "telefono": {
+          "label": "Teléfono",
+          "placeholder": "878 123 4567",
+          "required": true
+        },
+        "servicio": {
+          "label": "Motivo de Consulta",
+          "placeholder": "Selecciona el motivo de tu consulta",
+          "required": true,
+          "options": [
+            "Dolor Dental",
+            "Tratamiento de Conducto (Endodoncia)",
+            "Retratamiento de Conducto",
+            "Apicoformación",
+            "Revascularización Dental",
+            "Blanqueamiento Interno",
+            "Evaluación de Infección",
+            "Trauma Dental",
+            "Segunda Opinión",
+            "Consulta General",
+            "Otro"
+          ]
+        },
+        "mensaje": {
+          "label": "Mensaje Adicional",
+          "placeholder": "Describe brevemente tus síntomas o el motivo de tu consulta..."
+        }
+      },
+      "submit": {
+        "text": "Enviar por WhatsApp",
+        "icon": "Send",
+        "note": "Al enviar el formulario serás redirigido a WhatsApp para completar tu solicitud"
+      }
+    }
+  }
+}

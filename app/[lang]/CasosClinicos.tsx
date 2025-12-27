@@ -1,48 +1,22 @@
 'use client'
 import { Star, Quote, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
 
 const CasosClinicos = () => {
+  const t = useTranslations("testimonios-section")
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
-  const testimonios = [
-    {
-      id: 1,
-      nombre: "Alison Vera Jimenez",
-      rating: 5,
-      comentario: "Excelente atención por parte del Dr. Y por parte de su personal. El procedimiento no fue para nada doloroso. Además, en todo momento transmite mucha calma al paciente. 🤗…",
-      fecha: "Hace 1 meses"
-    },
-    {
-      id: 2,
-      nombre: "Marcos Becerra",
-      rating: 5,
-      comentario: "Excelente servicio y atención con un equipo muy amable, que te deja sin ninguna duda referente a tu tratamiento a realizar, el Doctor Chagollan con verdadera ética y vocacion  realizó su trabajo tan profesional que me sentí tan relajado y comfortable , no experimente dolor alguno durante el proceso ni despues del tratamiento.",
-      fecha: "Hace 5 meses"
-    },
-    {
-      id: 3,
-      nombre: "Ana Martínez",
-      rating: 5,
-      comentario: "Ético y profesional y se porta super bien el Doc me ayudo con mi problema de endodoncia mal hecho por otro dr de acuña coah. Me realizó retratamiento y me mostró por radiografía el cambio de mis raíces que no las habían bajado bien. Sus asistentes medicas muy lindas y serviciales! Soy de la ciudad Sterling Texas le doy mucha fé al dr Enrique!",
-      fecha: "Hace 3 meses"
-    },
-    {
-      id: 4,
-      nombre: "Juanita Velazquez",
-      rating: 5,
-      comentario: "Muy amables , y creo que en la cara de mi hijo pude ver el buen trabajo del Dr Enrique Chagollan ...estamos muy satisfechos muy buen dr sabe hacer su trabajo",
-      fecha: "Hace 1 año"
-    },
-    {
-      id: 5,
-      nombre: "julissa Lucero",
-      rating: 5,
-      comentario: "Muy profesional, me encanto mi experiencia y eso que soy algo nerviosa 😅, Muy limpio todo, el personal muy amables muy lindas! Y el Doctor Enrique muy buena gente y te explica todo muy bien en lo que se necesita que hacer!",
-      fecha: "Hace 2 meses"
-    }
-  ]
+  // Obtener testimonios dinámicamente
+  const testimoniosCount = 5
+  const testimonios = Array.from({ length: testimoniosCount }, (_, i) => ({
+    id: t(`items.${i}.id`),
+    nombre: t(`items.${i}.nombre`),
+    rating: Number(t(`items.${i}.rating`)),
+    comentario: t(`items.${i}.comentario`),
+    fecha: t(`items.${i}.fecha`)
+  }))
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonios.length)
@@ -82,21 +56,26 @@ const CasosClinicos = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full text-red-700 font-medium text-sm mb-6">
             <Quote className="w-4 h-4" />
-            Lo que dicen nuestros pacientes
+            {t("header.badge")}
           </div>
           
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Testimonios{" "}
-            <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
-              Reales
-            </span>
+            {t.rich("header.title", {
+              highlight: (chunks) => (
+                <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
+                  {chunks}
+                </span>
+              )
+            })}
           </h2>
 
           {/* Rating destacado */}
           <div className="flex items-center justify-center gap-6 mb-6">
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <span className="text-5xl font-bold text-gray-900">4.9</span>
+                <span className="text-5xl font-bold text-gray-900">
+                  {t("header.rating.value")}
+                </span>
                 <div className="flex flex-col items-start">
                   <div className="flex gap-1">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -106,10 +85,18 @@ const CasosClinicos = () => {
                       />
                     ))}
                   </div>
-                  <span className="text-sm text-gray-600">de 5 estrellas</span>
+                  <span className="text-sm text-gray-600">
+                    {t("header.rating.label")}
+                  </span>
                 </div>
               </div>
-              <p className="text-gray-600">Basado en <span className="font-semibold text-gray-900">74 opiniones</span> en Google</p>
+              <p className="text-gray-600">
+                {t.rich("header.rating.reviews", {
+                  highlight: (chunks) => (
+                    <span className="font-semibold text-gray-900">{chunks}</span>
+                  )
+                })}
+              </p>
             </div>
           </div>
         </div>
@@ -205,13 +192,13 @@ const CasosClinicos = () => {
         {/* CTA final */}
         <div className="text-center mt-16">
           <a
-            href="https://www.google.com/maps/place/Doctor+Enrique+Chagollan+Endodoncista/@28.7054746,-100.5220217,17z/data=!4m8!3m7!1s0x865f8d127e14dff7:0xda398f2bd806eeca!8m2!3d28.7054699!4d-100.5194468!9m1!1b1!16s%2Fg%2F11g2qmdn8z?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+            href={t("cta-final.url")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 text-red-600 hover:text-red-700 font-semibold transition-colors duration-300 group mb-6"
           >
             <ExternalLink className="w-5 h-5" />
-            Ver todas las reseñas en Google Maps
+            {t("cta-final.text")}
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
