@@ -7,6 +7,7 @@ import Footer from "./Layouts/Footer";
 import Navbar from "./Layouts/Navbar";
 import Preguntas from "./Preguntas";
 import Services from "./Services";
+import Pruebas from "./Pruebas";
 
 const page = () => {
 
@@ -19,6 +20,7 @@ const page = () => {
       <Navbar />
       <Header />
       <Services />
+      <Pruebas  />
       <CasosClinicos />
       <About />
       <Contacto />

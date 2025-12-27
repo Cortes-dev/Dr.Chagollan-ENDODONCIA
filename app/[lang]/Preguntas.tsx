@@ -2,52 +2,18 @@
 
 import { useState } from 'react'
 import { HelpCircle, ChevronDown, Phone } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 const Preguntas = () => {
+  const t = useTranslations("faq-section")
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
-  const faqs = [
-    {
-      pregunta: "¿Qué es un tratamiento de conducto (endodoncia)?",
-      respuesta: "El tratamiento de conducto es un procedimiento que elimina la pulpa dental infectada o dañada del interior del diente. Se limpia, desinfecta y sella el conducto radicular para salvar el diente natural y evitar su extracción. Es un procedimiento común y muy efectivo para preservar tu sonrisa natural."
-    },
-    {
-      pregunta: "¿El tratamiento de conducto es doloroso?",
-      respuesta: "No, el tratamiento de conducto moderno es prácticamente indoloro. Utilizamos anestesia local efectiva y tecnología avanzada para asegurar tu comodidad durante todo el procedimiento. La mayoría de los pacientes reportan que el tratamiento es similar a una restauración dental regular. Además, eliminamos el dolor que causaba la infección, así que te sentirás mejor después del tratamiento."
-    },
-    {
-      pregunta: "¿Cuánto tiempo dura un tratamiento de conducto?",
-      respuesta: "La duración varía según la complejidad del caso. Generalmente, un tratamiento de conducto puede completarse en una o dos citas de 60 a 90 minutos cada una. Los casos más complejos o retratamientos pueden requerir citas adicionales. Durante tu consulta inicial, te proporcionaremos un plan de tratamiento detallado con tiempos estimados."
-    },
-    {
-      pregunta: "¿Cuánto cuesta un tratamiento de endodoncia?",
-      respuesta: "El costo varía dependiendo del diente afectado y la complejidad del caso. Durante tu consulta inicial, realizaremos una evaluación completa y te proporcionaremos un presupuesto detallado sin compromiso. Ofrecemos opciones de pago flexibles para que puedas recibir el tratamiento que necesitas."
-    },
-    {
-      pregunta: "¿Qué pasa si no me hago el tratamiento de conducto?",
-      respuesta: "Si no se trata, la infección puede extenderse, causando dolor severo, abscesos, inflamación facial e incluso pérdida del hueso que sostiene el diente. Esto eventualmente resulta en la pérdida del diente y puede afectar los dientes vecinos. El tratamiento de conducto es la mejor opción para salvar tu diente natural y mantener tu salud bucal."
-    },
-    {
-      pregunta: "¿Necesito algún cuidado especial después del tratamiento?",
-      respuesta: "Los cuidados post-tratamiento son sencillos. Debes evitar masticar con el diente tratado hasta que esté completamente restaurado, mantener una buena higiene oral y tomar los medicamentos prescritos. Es normal experimentar sensibilidad leve durante unos días. Te proporcionaremos instrucciones detalladas y estaremos disponibles para cualquier duda o emergencia."
-    },
-    {
-      pregunta: "¿Cuál es la tasa de éxito de los tratamientos de conducto?",
-      respuesta: "Los tratamientos de conducto tienen una tasa de éxito del 95-98% cuando se realizan correctamente. Con nuestra tecnología avanzada, incluyendo microscopía dental y radiografía digital, y nuestros 14 años de experiencia, logramos resultados excepcionales. Los dientes tratados adecuadamente pueden durar toda la vida con el cuidado apropiado."
-    },
-    {
-      pregunta: "¿Aceptan seguros dentales?",
-      respuesta: "Trabajamos con diversos seguros dentales. Te recomendamos contactarnos directamente para verificar tu cobertura específica. Nuestro equipo te ayudará a maximizar tus beneficios y te explicará cualquier costo adicional antes de comenzar el tratamiento."
-    },
-    {
-      pregunta: "¿Atienden emergencias dentales?",
-      respuesta: "Sí, entendemos que las emergencias dentales no esperan. Reservamos espacios en nuestra agenda para casos de emergencia como dolor severo, trauma dental o infecciones agudas. Si tienes una emergencia, llámanos inmediatamente al 878 782 8610 y haremos lo posible por atenderte el mismo día."
-    },
-    {
-      pregunta: "¿Qué tecnología utilizan en sus tratamientos?",
-      respuesta: "Utilizamos tecnología de última generación incluyendo: microscopía dental para mayor precisión, radiografía digital que reduce la radiación hasta un 90%, localizadores apicales electrónicos, instrumental rotatorio de níquel-titanio, y sistemas de obturación termoplástica. Esta tecnología nos permite ofrecer tratamientos más rápidos, precisos y cómodos."
-    }
-  ]
+  // FAQs dinámicos desde i18n
+  const faqsCount = 10
+  const faqs = Array.from({ length: faqsCount }, (_, i) => ({
+    pregunta: t(`faqs.${i}.question`),
+    respuesta: t(`faqs.${i}.answer`)
+  }))
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -65,18 +31,18 @@ const Preguntas = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full text-red-700 font-medium text-sm mb-6">
             <HelpCircle className="w-4 h-4" />
-            Resolvemos tus dudas
+            {t("badge")}
           </div>
           
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Preguntas{" "}
+            {t("title.normal")}{" "}
             <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
-              Frecuentes
+              {t("title.highlight")}
             </span>
           </h2>
           
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Encuentra respuestas a las preguntas más comunes sobre nuestros tratamientos de endodoncia
+            {t("description")}
           </p>
         </div>
 
@@ -117,10 +83,10 @@ const Preguntas = () => {
         {/* CTA final */}
         <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-center shadow-2xl shadow-red-900/30">
           <h3 className="text-2xl font-bold text-white mb-3">
-            ¿Tienes más preguntas?
+            {t("cta.title")}
           </h3>
           <p className="text-red-100 mb-6">
-            Estamos aquí para ayudarte. Contáctanos y resolveremos todas tus dudas
+            {t("cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
@@ -128,13 +94,13 @@ const Preguntas = () => {
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-gray-50 text-red-600 font-bold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <Phone className="w-5 h-5" />
-              Llamar Ahora
+              {t("cta.call")}
             </a>
             <a 
-              href="#mensaje"
+              href="#contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-red-800 hover:bg-red-900 text-white font-bold rounded-xl transition-all duration-300 border-2 border-white/20"
             >
-              Enviar Mensaje
+              {t("cta.message")}
             </a>
           </div>
         </div>

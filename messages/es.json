@@ -8,6 +8,10 @@
       "label": "Servicios",
       "href": "#services"
     },
+    "cases": {
+      "label": "Casos Clínicos",
+      "href": "#casos"
+    },
     "testimonials": {
       "label": "Testimonios",
       "href": "#testimonio"
@@ -146,6 +150,74 @@
       }
     }
   },
+  "casos_clinicos": {
+    "header": {
+      "badge": {
+        "text": "Resultados Comprobados"
+      },
+      "titulo": "Casos",
+      "titulo_destacado": "Clínicos",
+      "descripcion": "Conoce nuestros tratamientos especializados y los resultados que logramos con cada paciente"
+    },
+    "imagen_slider": {
+      "label_instruccion": {
+        "antes": "ANTES",
+        "despues": "DESPUÉS"
+      },
+      "overlay_texto": {
+        "izquierda": "ANTES",
+        "derecha": "DESPUÉS"
+      },
+      "imagen_error": {
+        "texto_principal": "Imagen de",
+        "texto_secundario": "Antes y Después del tratamiento"
+      }
+    },
+    "casos": [
+      {
+        "id": 1,
+        "titulo": "Endodoncia",
+        "imagen": "/images/Endodoncia.webp",
+        "descripcion": "La endodoncia, también conocida como tratamiento de conducto, se realiza cuando el nervio del diente está dañado por caries profunda, golpes o fracturas. Durante el procedimiento, removemos cuidadosamente el tejido afectado, limpiamos y desinfectamos los conductos internos del diente, y los sellamos con materiales especializados para prevenir futuras infecciones. Finalmente, restauramos el diente para que recupere su función normal y apariencia natural. Este tratamiento es la mejor alternativa para salvar un diente que de otra manera tendría que extraerse. El objetivo principal es eliminar el dolor, controlar la infección y permitirte conservar tu diente natural por muchos años más. Con la tecnología actual, el procedimiento es cómodo y los resultados son altamente predecibles."
+      },
+      {
+        "id": 2,
+        "titulo": "Recubrimiento Pulpar Indirecto",
+        "imagen": "/images/Recubrimiento-pulpar-indirecto.webp",
+        "descripcion": "Este tratamiento preventivo se aplica cuando una caries ha avanzado cerca del nervio del diente, pero sin llegar a tocarlo. En lugar de hacer una endodoncia completa, eliminamos la mayor parte de la caries y colocamos un material protector especial sobre la dentina que queda. Este material actúa como un escudo que protege el nervio, estimula la regeneración natural del diente y previene que la caries continúe avanzando. Después, sellamos y restauramos el diente de forma definitiva. Es una solución conservadora que busca mantener tu diente vivo y funcionando normalmente, evitando tratamientos más invasivos. El procedimiento es rápido, cómodo y tiene una alta tasa de éxito cuando se realiza en el momento adecuado. Es ideal para pacientes que acuden temprano a consulta y permite salvar la vitalidad del diente."
+      },
+      {
+        "id": 3,
+        "titulo": "Recubrimiento Pulpar Directo",
+        "imagen": "/images/Recubrimiento-pulpar-directo.webp",
+        "descripcion": "Se indica cuando el nervio del diente queda expuesto accidentalmente durante un tratamiento o por una caries, pero el nervio aún está sano. En este caso, colocamos directamente sobre el nervio expuesto un material biocompatible especial que promueve su curación natural y estimula la formación de nueva dentina protectora. Luego restauramos el diente normalmente. Es una técnica delicada que requiere experiencia y precisión, pero cuando es posible realizarla, los beneficios son significativos: tu diente mantiene su vitalidad, sigue respondiendo normalmente y evitas un tratamiento de conducto. No todos los casos son candidatos para este procedimiento, por eso es fundamental una evaluación profesional detallada. Los mejores resultados se obtienen cuando se realiza inmediatamente después de la exposición y en dientes jóvenes con buena salud general."
+      },
+      {
+        "id": 4,
+        "titulo": "Retratamiento de Endodoncia",
+        "imagen": "/images/Retratamiento-de-endodoncia.webp",
+        "descripcion": "Cuando un tratamiento de conducto previo no ha tenido éxito y persisten molestias, infección o problemas en el diente, el retratamiento endodóntico es la solución. Este procedimiento consiste en reabrir el diente, remover cuidadosamente los materiales del tratamiento anterior, limpiar y desinfectar nuevamente todos los conductos a profundidad, y sellarlos correctamente con técnicas actualizadas. El objetivo es eliminar cualquier infección residual y darle una segunda oportunidad a tu diente. Aunque es un procedimiento más complejo que una endodoncia inicial, tiene excelentes tasas de éxito cuando es realizado por un especialista. En muchos casos, es la última alternativa antes de considerar la extracción del diente. Con tecnología de punta y experiencia adecuada, podemos resolver problemas complejos y ayudarte a conservar tu diente natural por mucho más tiempo."
+      },
+      {
+        "id": 5,
+        "titulo": "Blanqueamiento Dental Interno",
+        "imagen": "/images/Blanqueamiento-dental-interno.webp",
+        "descripcion": "Después de un tratamiento de conducto o un golpe fuerte, es común que un diente cambie de color y se vea más oscuro que los demás. El blanqueamiento interno es la solución estética ideal para estos casos. A diferencia del blanqueamiento tradicional que se aplica por fuera, este tratamiento funciona desde adentro del diente. Colocamos un gel blanqueador especial dentro de la cámara pulpar del diente, donde actúa directamente sobre las estructuras internas que causan la decoloración. El material permanece dentro del diente entre sesiones hasta lograr el tono deseado, que suele alcanzarse en 2 a 4 visitas. Finalmente, sellamos el diente de forma permanente. Es un procedimiento conservador, efectivo y seguro que te permite recuperar una sonrisa natural y armónica sin necesidad de coronas o carillas. Los resultados son duraderos y el cambio es notable desde las primeras sesiones."
+      }
+    ],
+    "navegacion": {
+      "boton_anterior": "Anterior",
+      "boton_siguiente": "Siguiente",
+      "aria_label": "Ir al caso"
+    },
+    "cta_final": {
+      "titulo": "¿Quieres resultados como estos?",
+      "descripcion": "Agenda tu consulta y descubre cómo podemos ayudarte a salvar tu diente natural con tecnología de punta y atención personalizada",
+      "boton_texto": "Agendar Consulta",
+      "telefono": "8787828610"
+    }
+  },
+
   "testimonios-section": {
     "header": {
       "badge": "Lo que dicen nuestros pacientes",
@@ -346,6 +418,136 @@
         "text": "Enviar por WhatsApp",
         "icon": "Send",
         "note": "Al enviar el formulario serás redirigido a WhatsApp para completar tu solicitud"
+      }
+    }
+  },
+  "faq-section": {
+    "badge": "Resolvemos tus dudas",
+    "title": {
+      "normal": "Preguntas",
+      "highlight": "Frecuentes"
+    },
+    "description": "Encuentra respuestas a las preguntas más comunes sobre nuestros tratamientos de endodoncia",
+
+    "faqs": [
+      {
+        "question": "¿Qué es un tratamiento de conducto (endodoncia)?",
+        "answer": "El tratamiento de conducto es un procedimiento que elimina la pulpa dental infectada o dañada del interior del diente. Se limpia, desinfecta y sella el conducto radicular para salvar el diente natural y evitar su extracción. Es un procedimiento común y muy efectivo para preservar tu sonrisa natural."
+      },
+      {
+        "question": "¿El tratamiento de conducto es doloroso?",
+        "answer": "No, el tratamiento de conducto moderno es prácticamente indoloro. Utilizamos anestesia local efectiva y tecnología avanzada para asegurar tu comodidad durante todo el procedimiento. La mayoría de los pacientes reportan que el tratamiento es similar a una restauración dental regular."
+      },
+      {
+        "question": "¿Cuánto tiempo dura un tratamiento de conducto?",
+        "answer": "Generalmente se completa en una o dos citas de 60 a 90 minutos cada una, dependiendo de la complejidad del caso."
+      },
+      {
+        "question": "¿Cuánto cuesta un tratamiento de endodoncia?",
+        "answer": "El costo varía según el diente afectado y la complejidad del caso. Durante tu consulta te proporcionaremos un presupuesto detallado sin compromiso."
+      },
+      {
+        "question": "¿Qué pasa si no me hago el tratamiento de conducto?",
+        "answer": "La infección puede extenderse, causar dolor severo, abscesos e incluso la pérdida del diente. El tratamiento de conducto es la mejor opción para salvarlo."
+      },
+      {
+        "question": "¿Necesito cuidados especiales después del tratamiento?",
+        "answer": "Debes evitar masticar con el diente tratado hasta su restauración final, mantener buena higiene oral y seguir las indicaciones médicas."
+      },
+      {
+        "question": "¿Cuál es la tasa de éxito del tratamiento?",
+        "answer": "Los tratamientos de conducto tienen una tasa de éxito del 95–98% cuando se realizan correctamente."
+      },
+      {
+        "question": "¿Aceptan seguros dentales?",
+        "answer": "Trabajamos con diversos seguros. Contáctanos para verificar tu cobertura."
+      },
+      {
+        "question": "¿Atienden emergencias dentales?",
+        "answer": "Sí. Atendemos emergencias como dolor severo, trauma dental o infecciones agudas."
+      },
+      {
+        "question": "¿Qué tecnología utilizan?",
+        "answer": "Utilizamos microscopía dental, radiografía digital, instrumental rotatorio de última generación y sistemas de obturación avanzados."
+      }
+    ],
+
+    "cta": {
+      "title": "¿Tienes más preguntas?",
+      "description": "Estamos aquí para ayudarte. Contáctanos y resolveremos todas tus dudas",
+      "call": "Llamar Ahora",
+      "message": "Enviar Mensaje"
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Dr. Enrique A. Chagollán B.",
+      "subtitle": "Especialista Certificado en Endodoncia",
+      "description": "14 años de experiencia salvando sonrisas con tecnología de punta y atención personalizada."
+    },
+
+    "social": {
+      "facebook": {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/drkikechagollan"
+      },
+      "instagram": {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/drkikechagollan"
+      }
+    },
+
+    "quickLinks": {
+      "title": "Enlaces Rápidos",
+      "items": [
+        { "label": "Inicio", "href": "/" },
+        { "label": "Servicios", "href": "/services" },
+        { "label": "Sobre Mí", "href": "/about" },
+        { "label": "Contacto", "href": "/contact" }
+      ]
+    },
+
+    "services": {
+      "title": "Servicios",
+      "items": [
+        "Endodoncia",
+        "Apicoformación",
+        "Revascularización",
+        "Blanqueamiento Interno",
+        "Retratamiento"
+      ]
+    },
+
+    "contact": {
+      "title": "Contacto",
+      "address": {
+        "line1": "Juárez 114, Zona Centro",
+        "line2": "26000 Piedras Negras, Coah."
+      },
+      "phone": {
+        "label": "878 782 8610",
+        "href": "tel:8787828610"
+      },
+      "email": {
+        "label": "contacto@drchagollan.com",
+        "href": "mailto:contacto@drchagollan.com"
+      },
+      "schedule": {
+        "weekdays": "Lun - Vie: 9:00 - 18:00",
+        "saturday": "Sáb: 9:00 - 14:00"
+      }
+    },
+
+    "bottom": {
+      "copyright": "© 2025 Dr. Enrique Alejandro Chagollán Benavides. Todos los derechos reservados.",
+      "privacy": {
+        "label": "Aviso de Privacidad",
+        "href": "/privacidad"
+      },
+      "credits": {
+        "text": "Diseñado con",
+        "author": "Diego Cortes",
+        "url": "https://cortes-dev.vercel.app"
       }
     }
   }

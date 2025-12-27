@@ -8,6 +8,10 @@
       "label": "Services",
       "href": "#services"
     },
+    "cases": {
+      "label": "Casos Clínicos",
+      "href": "#casos"
+    },
     "testimonials": {
       "label": "Testimonials",
       "href": "#testimonio"
@@ -130,11 +134,7 @@
         "title": "Digital Radiography",
         "subtitle": "Accurate Diagnosis",
         "description": "Advanced imaging technology for precise diagnoses with less radiation and immediate results.",
-        "features": [
-          "Lower radiation",
-          "Instant results",
-          "Greater accuracy"
-        ]
+        "features": ["Lower radiation", "Instant results", "Greater accuracy"]
       }
     ],
     "cta-final": {
@@ -146,6 +146,76 @@
       }
     }
   },
+
+  "casos_clinicos": {
+    "header": {
+      "badge": {
+        "text": "Proven Results"
+      },
+      "titulo": "Clinical",
+      "titulo_destacado": "Cases",
+      "descripcion": "Discover our specialized treatments and the results we achieve with each patient"
+    },
+    "imagen_slider": {
+      "label_instruccion": {
+        "antes": "BEFORE",
+        "despues": "AFTER"
+      },
+      "overlay_texto": {
+        "izquierda": "BEFORE",
+        "derecha": "AFTER"
+      },
+      "imagen_error": {
+        "texto_principal": "Image of",
+        "texto_secundario": "Before and After treatment"
+      }
+    },
+    "casos": [
+      {
+        "id": 1,
+        "titulo": "Root Canal Treatment",
+        "imagen": "/images/Endodoncia.webp",
+        "descripcion": "Root canal treatment, also known as endodontic therapy, is performed when the tooth's nerve is damaged by deep decay, trauma, or fractures. During the procedure, we carefully remove the affected tissue, clean and disinfect the tooth's internal canals, and seal them with specialized materials to prevent future infections. Finally, we restore the tooth so it regains its normal function and natural appearance. This treatment is the best alternative to save a tooth that would otherwise need to be extracted. The main goal is to eliminate pain, control infection, and allow you to keep your natural tooth for many more years. With current technology, the procedure is comfortable and results are highly predictable."
+      },
+      {
+        "id": 2,
+        "titulo": "Indirect Pulp Capping",
+        "imagen": "/images/Recubrimiento-pulpar-indirecto.webp",
+        "descripcion": "This preventive treatment is applied when decay has advanced close to the tooth's nerve but hasn't reached it. Instead of performing a complete root canal, we remove most of the decay and place a special protective material over the remaining dentin. This material acts as a shield that protects the nerve, stimulates the tooth's natural regeneration, and prevents the decay from continuing to advance. Afterward, we seal and restore the tooth definitively. It's a conservative solution that seeks to keep your tooth alive and functioning normally, avoiding more invasive treatments. The procedure is quick, comfortable, and has a high success rate when performed at the right time. It's ideal for patients who come in early for consultation and allows saving the tooth's vitality."
+      },
+      {
+        "id": 3,
+        "titulo": "Direct Pulp Capping",
+        "imagen": "/images/Recubrimiento-pulpar-directo.webp",
+        "descripcion": "It's indicated when the tooth's nerve becomes accidentally exposed during treatment or due to decay, but the nerve is still healthy. In this case, we place a special biocompatible material directly on the exposed nerve that promotes its natural healing and stimulates the formation of new protective dentin. Then we restore the tooth normally. It's a delicate technique that requires experience and precision, but when it's possible to perform it, the benefits are significant: your tooth maintains its vitality, continues responding normally, and you avoid a root canal treatment. Not all cases are candidates for this procedure, which is why a detailed professional evaluation is essential. The best results are obtained when performed immediately after exposure and in young teeth with good overall health."
+      },
+      {
+        "id": 4,
+        "titulo": "Root Canal Retreatment",
+        "imagen": "/images/Retratamiento-de-endodoncia.webp",
+        "descripcion": "When a previous root canal treatment hasn't been successful and discomfort, infection, or tooth problems persist, endodontic retreatment is the solution. This procedure consists of reopening the tooth, carefully removing the materials from the previous treatment, thoroughly cleaning and disinfecting all canals again, and properly sealing them with updated techniques. The goal is to eliminate any residual infection and give your tooth a second chance. Although it's a more complex procedure than an initial root canal, it has excellent success rates when performed by a specialist. In many cases, it's the last alternative before considering tooth extraction. With cutting-edge technology and proper expertise, we can solve complex problems and help you preserve your natural tooth for much longer."
+      },
+      {
+        "id": 5,
+        "titulo": "Internal Tooth Whitening",
+        "imagen": "/images/Blanqueamiento-dental-interno.webp",
+        "descripcion": "After a root canal treatment or a strong impact, it's common for a tooth to change color and appear darker than the others. Internal whitening is the ideal aesthetic solution for these cases. Unlike traditional whitening applied from the outside, this treatment works from inside the tooth. We place a special whitening gel inside the tooth's pulp chamber, where it acts directly on the internal structures causing discoloration. The material remains inside the tooth between sessions until the desired shade is achieved, usually reached in 2 to 4 visits. Finally, we seal the tooth permanently. It's a conservative, effective, and safe procedure that allows you to recover a natural and harmonious smile without the need for crowns or veneers. Results are long-lasting and the change is noticeable from the first sessions."
+      }
+    ],
+    "navegacion": {
+      "boton_anterior": "Previous",
+      "boton_siguiente": "Next",
+      "aria_label": "Go to case"
+    },
+    "cta_final": {
+      "titulo": "Want results like these?",
+      "descripcion": "Schedule your consultation and discover how we can help you save your natural tooth with cutting-edge technology and personalized care",
+      "boton_texto": "Schedule Consultation",
+      "telefono": "8787828610"
+    }
+  },
+
+
   "testimonios-section": {
     "header": {
       "badge": "What our patients say",
@@ -255,7 +325,10 @@
     "cta": {
       "title": "Ready to meet us?",
       "description": "Schedule your consultation and discover why over 600 patients a year trust us",
-      "button": { "text": "Schedule Your Appointment Now", "url": "tel:8787828610" }
+      "button": {
+        "text": "Schedule Your Appointment Now",
+        "url": "tel:8787828610"
+      }
     }
   },
   "contact-section": {
@@ -342,6 +415,131 @@
         "text": "Send via WhatsApp",
         "icon": "Send",
         "note": "Upon submitting the form, you will be redirected to WhatsApp to complete your request"
+      }
+    }
+  },
+  "faq-section": {
+    "badge": "We answer your questions",
+    "title": {
+      "normal": "Frequently",
+      "highlight": "Asked Questions"
+    },
+    "description": "Find answers to the most common questions about our endodontic treatments",
+
+    "faqs": [
+      {
+        "question": "What is a root canal treatment (endodontics)?",
+        "answer": "A root canal treatment is a procedure that removes infected or damaged dental pulp from inside the tooth. The root canal is cleaned, disinfected, and sealed to save the natural tooth and prevent extraction. It is a common and highly effective procedure to preserve your natural smile."
+      },
+      {
+        "question": "Is a root canal treatment painful?",
+        "answer": "No, modern root canal treatment is virtually painless. We use effective local anesthesia and advanced technology to ensure your comfort throughout the procedure. Most patients report that the treatment feels similar to a regular dental restoration."
+      },
+      {
+        "question": "How long does a root canal treatment take?",
+        "answer": "It is usually completed in one or two appointments of 60 to 90 minutes each, depending on the complexity of the case."
+      },
+      {
+        "question": "How much does a root canal treatment cost?",
+        "answer": "The cost varies depending on the affected tooth and the complexity of the case. During your consultation, we will provide a detailed, no-obligation estimate."
+      },
+      {
+        "question": "What happens if I don’t get a root canal treatment?",
+        "answer": "The infection can spread, cause severe pain, abscesses, and even tooth loss. A root canal treatment is the best option to save the tooth."
+      },
+      {
+        "question": "Do I need special care after the treatment?",
+        "answer": "You should avoid chewing with the treated tooth until its final restoration, maintain good oral hygiene, and follow your dentist’s instructions."
+      },
+      {
+        "question": "What is the success rate of the treatment?",
+        "answer": "Root canal treatments have a success rate of 95–98% when performed correctly."
+      },
+      {
+        "question": "Do you accept dental insurance?",
+        "answer": "We work with various insurance providers. Contact us to verify your coverage."
+      },
+      {
+        "question": "Do you treat dental emergencies?",
+        "answer": "Yes. We treat emergencies such as severe pain, dental trauma, or acute infections."
+      },
+      {
+        "question": "What technology do you use?",
+        "answer": "We use dental microscopy, digital radiography, state-of-the-art rotary instruments, and advanced obturation systems."
+      }
+    ],
+
+    "cta": {
+      "title": "Do you have more questions?",
+      "description": "We are here to help you. Contact us and we will resolve all your doubts",
+      "call": "Call Now",
+      "message": "Send Message"
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Dr. Enrique A. Chagollán B.",
+      "subtitle": "Certified Endodontics Specialist",
+      "description": "14 years of experience saving smiles with cutting-edge technology and personalized care."
+    },
+    "social": {
+      "facebook": {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/drkikechagollan"
+      },
+      "instagram": {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/drkikechagollan"
+      }
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "items": [
+        { "label": "Home", "href": "/" },
+        { "label": "Services", "href": "/services" },
+        { "label": "About Me", "href": "/about" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    },
+    "services": {
+      "title": "Services",
+      "items": [
+        "Endodontics",
+        "Apexification",
+        "Revascularization",
+        "Internal Whitening",
+        "Retreatment"
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "address": {
+        "line1": "Juárez 114, Downtown",
+        "line2": "26000 Piedras Negras, Coah."
+      },
+      "phone": {
+        "label": "878 782 8610",
+        "href": "tel:8787828610"
+      },
+      "email": {
+        "label": "contacto@drchagollan.com",
+        "href": "mailto:contacto@drchagollan.com"
+      },
+      "schedule": {
+        "weekdays": "Mon - Fri: 9:00 AM - 6:00 PM",
+        "saturday": "Sat: 9:00 AM - 2:00 PM"
+      }
+    },
+    "bottom": {
+      "copyright": "© 2025 Dr. Enrique Alejandro Chagollán Benavides. All rights reserved.",
+      "privacy": {
+        "label": "Privacy Policy",
+        "href": "/privacidad"
+      },
+      "credits": {
+        "text": "Designed with",
+        "author": "Diego Cortes",
+        "url": "https://cortes-dev.vercel.app"
       }
     }
   }

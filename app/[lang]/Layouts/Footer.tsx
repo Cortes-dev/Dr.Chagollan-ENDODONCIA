@@ -7,22 +7,23 @@ import {
   Facebook,
   Instagram,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
-  const menuItems = [
-    { href: "/", label: "Inicio" },
-    { href: "/services", label: "Servicios" },
-    { href: "/about", label: "Sobre Mí" },
-    { href: "/contact", label: "Contacto" },
-  ];
+  const t = useTranslations("footer");
 
-  const servicios = [
-    "Endodoncia",
-    "Apicoformación",
-    "Revascularización",
-    "Blanqueamiento Interno",
-    "Retratamiento",
-  ];
+  // Quick Links dinámicos
+  const quickLinksCount = 4;
+  const menuItems = Array.from({ length: quickLinksCount }, (_, i) => ({
+    href: t(`quickLinks.items.${i}.href`),
+    label: t(`quickLinks.items.${i}.label`)
+  }));
+
+  // Servicios dinámicos
+  const servicesCount = 5;
+  const servicios = Array.from({ length: servicesCount }, (_, i) => 
+    t(`services.items.${i}`)
+  );
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300 relative overflow-hidden">
@@ -42,42 +43,40 @@ const Footer = () => {
                 className="h-12 w-auto mb-4 brightness-0 invert opacity-90"
               />
               <h3 className="text-xl font-bold text-white mb-2">
-                Dr. Enrique A. Chagollán B.
+                {t("brand.name")}
               </h3>
               <p className="text-sm text-gray-400">
-                Especialista Certificado en Endodoncia
+                {t("brand.subtitle")}
               </p>
             </div>
 
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
-              14 años de experiencia salvando sonrisas con tecnología de punta y
-              atención personalizada.
+              {t("brand.description")}
             </p>
 
             {/* Redes sociales */}
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com/drkikechagollan"
+                href={t("social.facebook.url")}
                 className="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Facebook"
+                aria-label={t("social.facebook.label")}
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://www.instagram.com/drkikechagollan"
+                href={t("social.instagram.url")}
                 className="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Instagram"
+                aria-label={t("social.instagram.label")}
               >
                 <Instagram className="w-5 h-5" />
               </a>
-
             </div>
           </div>
 
           {/* Columna 2: Enlaces rápidos */}
           <div>
             <h4 className="text-white font-bold text-lg mb-4">
-              Enlaces Rápidos
+              {t("quickLinks.title")}
             </h4>
             <ul className="space-y-3">
               {menuItems.map((item) => (
@@ -96,10 +95,12 @@ const Footer = () => {
 
           {/* Columna 3: Servicios */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-4">Servicios</h4>
+            <h4 className="text-white font-bold text-lg mb-4">
+              {t("services.title")}
+            </h4>
             <ul className="space-y-3">
-              {servicios.map((servicio) => (
-                <li key={servicio}>
+              {servicios.map((servicio, index) => (
+                <li key={index}>
                   <a
                     href={`#${servicio}`}
                     className="text-gray-400 hover:text-red-500 transition-colors duration-300 text-sm flex items-center group"
@@ -114,45 +115,47 @@ const Footer = () => {
 
           {/* Columna 4: Contacto */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-4">Contacto</h4>
+            <h4 className="text-white font-bold text-lg mb-4">
+              {t("contact.title")}
+            </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 group">
                 <MapPin className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-sm text-gray-400">Juárez 114, Zona Centro</p>
                   <p className="text-sm text-gray-400">
-                    26000 Piedras Negras, Coah.
+                    {t("contact.address.line1")}
+                  </p>
+                  <p className="text-sm text-gray-400">
+                    {t("contact.address.line2")}
                   </p>
                 </div>
               </li>
 
-
-
               <li className="flex items-center gap-3 group">
                 <Phone className="w-5 h-5 text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <a
-                  href="tel:8787828610"
+                  href={t("contact.phone.href")}
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
-                  878 782 8610
+                  {t("contact.phone.label")}
                 </a>
               </li>
 
               <li className="flex items-center gap-3 group">
                 <Mail className="w-5 h-5 text-red-500 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <a
-                  href="mailto:contacto@drchagollan.com"
+                  href={t("contact.email.href")}
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
-                  contacto@drchagollan.com
+                  {t("contact.email.label")}
                 </a>
               </li>
 
               <li className="flex items-start gap-3 group">
                 <Clock className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div className="text-sm text-gray-400">
-                  <p>Lun - Vie: 9:00 - 18:00</p>
-                  <p>Sáb: 9:00 - 14:00</p>
+                  <p>{t("contact.schedule.weekdays")}</p>
+                  <p>{t("contact.schedule.saturday")}</p>
                 </div>
               </li>
             </ul>
@@ -166,28 +169,27 @@ const Footer = () => {
         <div className="py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400 text-center md:text-left">
-              © 2025 Dr. Enrique Alejandro Chagollán Benavides. Todos los
-              derechos reservados.
+              {t("bottom.copyright")}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 text-sm">
               <a
-                href="/privacidad"
+                href={t("bottom.privacy.href")}
                 className="text-gray-400 hover:text-red-500 transition-colors duration-300"
               >
-                Aviso de Privacidad
+                {t("bottom.privacy.label")}
               </a>
               <span className="hidden sm:inline text-gray-600">•</span>
               <a
                 target="_blank"
-                href="https://cortes-dev.vercel.app"
+                href={t("bottom.credits.url")}
                 className="text-gray-400 hover:text-red-500 transition-colors duration-300 group flex items-center gap-1"
               >
-                Diseñado con
+                {t("bottom.credits.text")}
                 <span className="text-red-500 group-hover:scale-125 transition-transform inline-block">
                   ♥
                 </span>
-                por Diego Cortes
+                {t("bottom.credits.author")}
               </a>
             </div>
           </div>
