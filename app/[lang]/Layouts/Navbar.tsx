@@ -1,293 +1,208 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useCallback, memo } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
-import { useTransition, useEffect } from "react";
+import { useTransition } from "react";
+import { useTranslations } from "next-intl";
 
 const PHONE_NUMBER = "+528787828610";
 
+/* ---------------------------------- */
+/* Hook reutilizable para idioma */
+/* ---------------------------------- */
+const useLocaleSwitcher = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
+
+  const currentLocale =
+    pathname.split("/")[1] === "en" ? "en" : "es";
+
+  const changeLocale = (locale: "es" | "en") => {
+    if (locale === currentLocale) return;
+
+    const segments = pathname.split("/");
+    segments[1] = locale;
+
+    startTransition(() => {
+      router.push(segments.join("/"));
+    });
+  };
+
+  return { currentLocale, changeLocale, isPending };
+};
+
+/* ---------------------------------- */
+/* NavLink */
+/* ---------------------------------- */
 const NavLink = memo(
   ({
     href,
     label,
-    onClick,
     mobile = false,
+    onClick,
   }: {
     href: string;
     label: string;
-    onClick?: () => void;
     mobile?: boolean;
-  }) => (
-    <Link
-      href={href}
-      onClick={onClick}
-      className={`${
-        mobile
-          ? "block w-full text-left px-4 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200 font-medium text-base border-b border-gray-100 last:border-0"
-          : "px-4 py-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-lg transition-all duration-300 font-medium relative group"
-      }`}
-    >
-      {label}
-      {!mobile && (
-        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-800 group-hover:w-full transition-all duration-300" />
-      )}
-    </Link>
-  )
-);
+    onClick?: () => void;
+  }) => {
+    const pathname = usePathname();
+    const isActive = pathname === href;
 
+    return (
+      <Link
+        href={href}
+        onClick={onClick}
+        className={`relative font-medium transition-all
+          ${
+            mobile
+              ? "block px-4 py-3 rounded-lg text-gray-700 hover:bg-red-50"
+              : "px-4 py-2 rounded-lg"
+          }
+          ${isActive ? "text-red-600" : "text-gray-700 hover:text-red-600"}
+        `}
+      >
+        {label}
+        {!mobile && (
+          <span
+            className={`absolute bottom-0 left-0 h-0.5 bg-red-600 transition-all
+              ${isActive ? "w-full" : "w-0 group-hover:w-full"}
+            `}
+          />
+        )}
+      </Link>
+    );
+  }
+);
 NavLink.displayName = "NavLink";
 
+/* ---------------------------------- */
+/* CTA */
+/* ---------------------------------- */
 const CTAButton = memo(
-  ({
-    className = "",
-    mobile = false,
-    onClick,
-    label,
-  }: {
-    className?: string;
-    mobile?: boolean;
-    onClick?: () => void;
-    label: string;
-  }) => (
+  ({ label, mobile = false, onClick }: any) => (
     <a
       href={`tel:${PHONE_NUMBER}`}
       onClick={onClick}
-      className={`flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold rounded-lg shadow-lg shadow-red-900/30 transition-all duration-300 hover:shadow-xl hover:shadow-red-900/50 ${
-        !mobile && "hover:scale-105"
-      } ${mobile ? "w-full text-base" : ""} ${className}`}
+      className={`flex items-center justify-center gap-2 px-6 py-3
+        bg-gradient-to-r from-red-600 to-red-700
+        hover:from-red-700 hover:to-red-800
+        text-white font-semibold rounded-xl shadow-lg
+        transition-all hover:scale-105
+        ${mobile ? "w-full" : ""}
+      `}
     >
       <Phone className="w-5 h-5" />
-      <span>{label}</span>
+      {label}
     </a>
   )
 );
-
 CTAButton.displayName = "CTAButton";
 
-// LocaleSwitcher para Desktop
-const LocaleSwitcherDesktop = memo(() => {
-  const router = useRouter();
-  const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
-  const [currentLocale, setCurrentLocale] = useState<"es" | "en">("es");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const locale = pathname.split("/")[1];
-    if (locale === "en" || locale === "es") {
-      setCurrentLocale(locale as "es" | "en");
-    }
-  }, [pathname]);
-
-  const changeLocale = (newLocale: "es" | "en") => {
-    if (newLocale === currentLocale) return;
-
-    const segments = pathname.split("/");
-    segments[1] = newLocale;
-    const newPathname = segments.join("/");
-
-    startTransition(() => {
-      router.push(newPathname);
-    });
-  };
-
-  if (!mounted) return null;
+/* ---------------------------------- */
+/* Locale Switcher */
+/* ---------------------------------- */
+const LocaleSwitcher = ({ mobile = false }: { mobile?: boolean }) => {
+  const { currentLocale, changeLocale, isPending } =
+    useLocaleSwitcher();
 
   return (
-    <div className="flex items-center gap-0 rounded-full shadow-lg p-1 border-2 border-red-600">
-      <button
-        onClick={() => changeLocale("es")}
-        disabled={isPending || currentLocale === "es"}
-        className={`px-3 py-1.5 rounded-full font-bold transition-all duration-300 flex items-center gap-1.5 text-xs uppercase tracking-wide ${
-          currentLocale === "es"
-            ? "bg-gradient-to-r from-red-600 to-red-700 text-black shadow-lg scale-105"
-            : "text-black hover:bg-red-600/20 hover:text-red-400"
-        } disabled:opacity-60 disabled:cursor-not-allowed`}
-      >
-        <span className="text-sm">🇲🇽</span>
-        <span>ES</span>
-      </button>
-
-      <div className="w-px h-6 bg-red-600/30"></div>
-
-      <button
-        onClick={() => changeLocale("en")}
-        disabled={isPending || currentLocale === "en"}
-        className={`px-3 py-1.5 rounded-full font-bold transition-all duration-300 flex items-center gap-1.5 text-xs uppercase tracking-wide ${
-          currentLocale === "en"
-            ? "bg-gradient-to-r from-red-600 to-red-700 text-black shadow-lg scale-105"
-            : "text-black hover:bg-red-600/20 hover:text-red-400"
-        } disabled:opacity-60 disabled:cursor-not-allowed`}
-      >
-        <span className="text-sm">🇺🇸</span>
-        <span>EN</span>
-      </button>
+    <div
+      className={`flex items-center rounded-full border-2 border-red-600 p-1
+        ${mobile ? "w-full" : ""}
+      `}
+    >
+      {(["es", "en"] as const).map((lang) => (
+        <button
+          key={lang}
+          onClick={() => changeLocale(lang)}
+          disabled={isPending}
+          className={`flex-1 px-4 py-2 rounded-full font-bold text-sm transition-all
+            ${
+              currentLocale === lang
+                ? "bg-red-600 text-white scale-105"
+                : "text-gray-700 hover:bg-red-100"
+            }
+          `}
+        >
+          {lang === "es" ? "🇲🇽 ES" : "🇺🇸 EN"}
+        </button>
+      ))}
     </div>
   );
-});
+};
 
-LocaleSwitcherDesktop.displayName = "LocaleSwitcherDesktop";
-
-// LocaleSwitcher para Mobile
-const LocaleSwitcherMobile = memo(() => {
-  const router = useRouter();
-  const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
-  const [currentLocale, setCurrentLocale] = useState<"es" | "en">("es");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const locale = pathname.split("/")[1];
-    if (locale === "en" || locale === "es") {
-      setCurrentLocale(locale as "es" | "en");
-    }
-  }, [pathname]);
-
-  const changeLocale = (newLocale: "es" | "en") => {
-    if (newLocale === currentLocale) return;
-
-    const segments = pathname.split("/");
-    segments[1] = newLocale;
-    const newPathname = segments.join("/");
-
-    startTransition(() => {
-      router.push(newPathname);
-    });
-  };
-
-  if (!mounted) return null;
-
-  return (
-    <div className="flex items-center gap-0 rounded-full shadow-lg p-1.5 border-2 border-red-600">
-      <button
-        onClick={() => changeLocale("es")}
-        disabled={isPending || currentLocale === "es"}
-        className={`flex-1 px-4 py-2.5 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-wide ${
-          currentLocale === "es"
-            ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg scale-105"
-            : "text-white hover:bg-red-600/20 hover:text-red-400"
-        } disabled:opacity-60 disabled:cursor-not-allowed`}
-      >
-        <span className="text-base">🇲🇽</span>
-        <span>Español</span>
-      </button>
-
-      <div className="w-px h-8 bg-red-600/30"></div>
-
-      <button
-        onClick={() => changeLocale("en")}
-        disabled={isPending || currentLocale === "en"}
-        className={`flex-1 px-4 py-2.5 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-wide ${
-          currentLocale === "en"
-            ? "bg-gradient-to-r from-red-600 to-red-700 text-black shadow-lg scale-105"
-            : "text-black hover:bg-red-600/20 hover:text-red-400"
-        } disabled:opacity-60 disabled:cursor-not-allowed`}
-      >
-        <span className="text-base">🇺🇸</span>
-        <span>English</span>
-      </button>
-    </div>
-  );
-});
-
-LocaleSwitcherMobile.displayName = "LocaleSwitcherMobile";
-
-const Navbar = () => {
+/* ---------------------------------- */
+/* Navbar */
+/* ---------------------------------- */
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = useCallback(() => setIsOpen((prev) => !prev), []);
-  const closeMenu = useCallback(() => setIsOpen(false), []);
-
+  const toggle = useCallback(() => setIsOpen((p) => !p), []);
+  const close = useCallback(() => setIsOpen(false), []);
   const t = useTranslations("navbar-home");
 
   return (
-    <nav className="bg-white/95 shadow-md border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="h-16 sm:h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className="w-28 h-12 sm:w-32 sm:h-14 flex-shrink-0"
-            aria-label="Ir al inicio"
-          >
-            <img
-              className="w-full h-full object-contain"
+          <Link href="/" aria-label="Inicio">
+            <Image
               src="/images/logo-chagollan.png"
-              alt="Logo Chagollán"
-              width="128"
-              height="56"
-              loading="eager"
+              alt="Logo"
+              width={140}
+              height={60}
+              priority
             />
           </Link>
 
-          {/* Menú desktop */}
-          <div className="hidden md:flex items-center space-x-1">
+          {/* Desktop menu */}
+          <div className="hidden md:flex items-center gap-1">
             <NavLink href="/" label={t("home.label")} />
             <NavLink href={t("services.href")} label={t("services.label")} />
-            <NavLink
-              href={t("testimonials.href")}
-              label={t("testimonials.label")}
-            />
+            <NavLink href={t("testimonials.href")} label={t("testimonials.label")} />
             <NavLink href={t("about.href")} label={t("about.label")} />
             <NavLink href={t("contact.href")} label={t("contact.label")} />
           </div>
 
-          {/* CTA + Selector de idioma Desktop */}
+          {/* Desktop actions */}
           <div className="hidden md:flex items-center gap-4">
-            <LocaleSwitcherDesktop />
+            <LocaleSwitcher />
             <CTAButton label={t("cta")} />
           </div>
 
-          {/* Botón menú móvil */}
+          {/* Mobile toggle */}
           <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:text-red-600 hover:bg-gray-50 transition-colors duration-300 active:scale-95"
-            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-            aria-expanded={isOpen}
+            onClick={toggle}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X /> : <Menu />}
           </button>
         </div>
       </div>
 
-      {/* Menú móvil */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-        aria-hidden={!isOpen}
-      >
-        <div className="px-4 pt-2 pb-6 space-y-1 bg-white border-t border-gray-200 shadow-inner">
-          <NavLink href="/" label={t("home.label")} onClick={closeMenu} mobile />
-          <NavLink href={t("services.href")} label={t("services.label")} onClick={closeMenu} mobile />
-          <NavLink
-            href={t("testimonials.href")}
-            label={t("testimonials.label")}
-            onClick={closeMenu}
-            mobile
-          />
-          <NavLink href={t("about.href")} label={t("about.label")} onClick={closeMenu} mobile />
-          <NavLink href={t("contact.href")} label={t("contact.label")} onClick={closeMenu} mobile />
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white border-t px-4 pb-6 space-y-2">
+          <NavLink href="/" label={t("home.label")} mobile onClick={close} />
+          <NavLink href={t("services.href")} label={t("services.label")} mobile onClick={close} />
+          <NavLink href={t("testimonials.href")} label={t("testimonials.label")} mobile onClick={close} />
+          <NavLink href={t("about.href")} label={t("about.label")} mobile onClick={close} />
+          <NavLink href={t("contact.href")} label={t("contact.label")} mobile onClick={close} />
 
-          {/* Selector de idioma móvil */}
-          <div className="pt-4 pb-2">
-            <LocaleSwitcherMobile />
+          <div className="pt-4">
+            <LocaleSwitcher mobile />
           </div>
 
-          {/* CTA móvil */}
           <div className="pt-2">
-            <CTAButton mobile onClick={closeMenu} label={t("cta")} />
+            <CTAButton mobile label={t("cta")} onClick={close} />
           </div>
         </div>
-      </div>
+      )}
     </nav>
   );
-};
-
-export default Navbar;
+}
