@@ -297,7 +297,7 @@
       ]
     },
     "stats": [
-      { "icon": "Clock", "number": "14+", "label": "Años de Experiencia" },
+      { "icon": "Clock", "number": "+14", "label": "Años de Experiencia" },
       { "icon": "Users", "number": "600+", "label": "Pacientes por Año" },
       { "icon": "Target", "number": "98%", "label": "Tasa de Éxito" },
       {
@@ -332,6 +332,14 @@
       "title": "¿Listo para conocernos?",
       "description": "Agenda tu consulta y descubre por qué más de 600 pacientes al año confían en nosotros",
       "button": { "text": "Agenda tu Cita Ahora", "url": "tel:8787828610" }
+    },
+    "floating": {
+      "years": "14 Años",
+      "label": "Salvando Sonrisas"
+    },
+    "valores":{
+      "title": "Nuestros Valores",
+      "subtitle": "Los principios que guían cada uno de nuestros tratamientos"
     }
   },
   "contact-section": {
@@ -365,8 +373,8 @@
       {
         "icon": "Clock",
         "title": "Horarios",
-        "content": "Lun - Vie: 9:00 - 18:00",
-        "subcontent": "Sáb: 9:00 - 14:00",
+        "content": "Lun - Vie: 9:00am - 1:00pm / 3:00pm - 7:00pm",
+        "subcontent": "Sáb: 9:00am - 3:00pm",
         "link": null
       }
     ],
@@ -529,8 +537,8 @@
         "href": "tel:8787828610"
       },
       "email": {
-        "label": "contacto@drchagollan.com",
-        "href": "mailto:contacto@drchagollan.com"
+        "label": "dr.enriquechagollanendodoncia@gmail.com",
+        "href": "mailto:dr.enriquechagollanendodoncia@gmail.com"
       },
       "schedule": {
         "weekdays": "Lun - Vie: 9:00 - 18:00",

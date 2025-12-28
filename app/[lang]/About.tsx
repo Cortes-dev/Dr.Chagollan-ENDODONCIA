@@ -197,7 +197,7 @@ const About = () => {
         <div className="mb-20">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              {t.rich('values.title', {
+              {t.rich('valores.title', {
                 highlight: (chunks) => (
                   <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
                     {chunks}
@@ -206,7 +206,7 @@ const About = () => {
               })}
             </h3>
             <p className="text-gray-600">
-              {t('values.subtitle')}
+              {t('valores.subtitle')}
             </p>
           </div>
 

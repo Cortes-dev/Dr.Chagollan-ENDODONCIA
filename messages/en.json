@@ -146,7 +146,6 @@
       }
     }
   },
-
   "casos_clinicos": {
     "header": {
       "badge": {
@@ -214,8 +213,6 @@
       "telefono": "8787828610"
     }
   },
-
-
   "testimonios-section": {
     "header": {
       "badge": "What our patients say",
@@ -295,7 +292,7 @@
       ]
     },
     "stats": [
-      { "icon": "Clock", "number": "14+", "label": "Years of Experience" },
+      { "icon": "Clock", "number": "+14", "label": "Years of Experience" },
       { "icon": "Users", "number": "600+", "label": "Patients per Year" },
       { "icon": "Target", "number": "98%", "label": "Success Rate" },
       { "icon": "Microscope", "number": "100%", "label": "Digital Technology" }
@@ -329,6 +326,14 @@
         "text": "Schedule Your Appointment Now",
         "url": "tel:8787828610"
       }
+    },
+    "floating": {
+      "years": "14 Years",
+      "label": "Saving Smiles"
+    },
+    "valores": {
+      "title": "Our <highlight>Values</highlight>",
+      "subtitle": "The principles that guide each of our treatments"
     }
   },
   "contact-section": {
@@ -362,8 +367,8 @@
       {
         "icon": "Clock",
         "title": "Hours",
-        "content": "Mon - Fri: 9:00 - 18:00",
-        "subcontent": "Sat: 9:00 - 14:00",
+        "content": "Mon - Fri: 9:00am - 1:00pm / 3:00pm - 7:00pm",
+        "subcontent": "Sat: 9:00am - 3:00pm",
         "link": null
       }
     ],
@@ -522,8 +527,8 @@
         "href": "tel:8787828610"
       },
       "email": {
-        "label": "contacto@drchagollan.com",
-        "href": "mailto:contacto@drchagollan.com"
+        "label": "dr.enriquechagollanendodoncia@gmail.com",
+        "href": "mailto:dr.enriquechagollanendodoncia@gmail.com"
       },
       "schedule": {
         "weekdays": "Mon - Fri: 9:00 AM - 6:00 PM",
