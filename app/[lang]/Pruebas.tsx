@@ -83,7 +83,7 @@ const CasosClinicos = () => {
               <img 
                 src={caso.imagen}
                 alt={`${caso.titulo} - Comparación antes y después`}
-                className={`w-full object-cover ${
+                className={`w-full object-contain ${
                   isVertical 
                     ? 'h-auto max-h-[800px]' 
                     : 'h-full object-center'
