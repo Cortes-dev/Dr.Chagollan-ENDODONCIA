@@ -40,8 +40,8 @@ const LocaleSwitcher = memo(() => {
           disabled={isPending || currentLocale === "es"}
           className={`px-5 py-2.5 rounded-full font-bold transition-all duration-300 flex items-center gap-2 text-sm uppercase tracking-wide ${
             currentLocale === "es"
-              ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg scale-105"
-              : "text-white hover:bg-red-600/20 hover:text-red-400"
+              ? "bg-gradient-to-r from-red-600 to-red-700 text-black shadow-lg scale-105"
+              : "text-black hover:bg-red-600/20 hover:text-red-400"
           } disabled:opacity-60 disabled:cursor-not-allowed`}
         >
           <span className="text-base">🇲🇽</span>
@@ -55,8 +55,8 @@ const LocaleSwitcher = memo(() => {
           disabled={isPending || currentLocale === "en"}
           className={`px-5 py-2.5 rounded-full font-bold transition-all duration-300 flex items-center gap-2 text-sm uppercase tracking-wide ${
             currentLocale === "en"
-              ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg scale-105"
-              : "text-white hover:bg-red-600/20 hover:text-red-400"
+              ? "bg-gradient-to-r from-red-600 to-red-700 text-black shadow-lg scale-105"
+              : "text-black hover:bg-red-600/20 hover:text-red-400"
           } disabled:opacity-60 disabled:cursor-not-allowed`}
         >
           <span className="text-base">🇺🇸</span>
