@@ -129,14 +129,14 @@ const CasosClinicos = () => {
               {/* Para imagen vertical, labels arriba y abajo */}
               {isVertical && (
                 <>
-                  <div className="absolute top-16 md:top-20 left-1/2 -translate-x-1/2 z-10">
+                  <div className="absolute top-2 md:top-4 left-[70%] -translate-x-1/2 z-10">
                     <div className="bg-black/70 backdrop-blur-sm px-4 py-2 md:px-6 md:py-3 rounded-full">
                       <span className="text-white font-bold text-sm md:text-base">
                         {t("imagen_slider.overlay_texto.izquierda")}
                       </span>
                     </div>
                   </div>
-                  <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-10">
+                  <div className="absolute bottom-4 md:bottom-6 left-[70%] -translate-x-1/2 z-10">
                     <div className="bg-black/70 backdrop-blur-sm px-4 py-2 md:px-6 md:py-3 rounded-full">
                       <span className="text-white font-bold text-sm md:text-base">
                         {t("imagen_slider.overlay_texto.derecha")}
