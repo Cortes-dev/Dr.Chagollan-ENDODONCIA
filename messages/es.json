@@ -48,7 +48,7 @@
     },
     "stats": {
       "patients": {
-        "value": "600+",
+        "value": "+600",
         "label": "Pacientes/Año"
       },
       "experience": {
@@ -298,7 +298,7 @@
     },
     "stats": [
       { "icon": "Clock", "number": "+14", "label": "Años de Experiencia" },
-      { "icon": "Users", "number": "600+", "label": "Pacientes por Año" },
+      { "icon": "Users", "number": "+600", "label": "Pacientes por Año" },
       { "icon": "Target", "number": "98%", "label": "Tasa de Éxito" },
       {
         "icon": "Microscope",

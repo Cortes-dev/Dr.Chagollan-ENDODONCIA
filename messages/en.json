@@ -48,7 +48,7 @@
     },
     "stats": {
       "patients": {
-        "value": "600+",
+        "value": "+600",
         "label": "Patients/Year"
       },
       "experience": {
@@ -293,7 +293,7 @@
     },
     "stats": [
       { "icon": "Clock", "number": "+14", "label": "Years of Experience" },
-      { "icon": "Users", "number": "600+", "label": "Patients per Year" },
+      { "icon": "Users", "number": "+600", "label": "Patients per Year" },
       { "icon": "Target", "number": "98%", "label": "Success Rate" },
       { "icon": "Microscope", "number": "100%", "label": "Digital Technology" }
     ],
