@@ -99,7 +99,7 @@
       {
         "id": 3,
         "icon": "RefreshCw",
-        "title": "Dental Revascularization",
+        "title": "Endodontic Regeneration",
         "subtitle": "Biological Regeneration",
         "description": "Regenerative technique that revitalizes necrotic teeth in young patients, restoring pulpal function.",
         "features": [
@@ -121,7 +121,7 @@
         "icon": "RefreshCw",
         "title": "Retreatment",
         "subtitle": "Second Chance",
-        "description": "When a previous treatment was unsuccessful, we perform endodontic retreatment to definitively save the tooth.",
+        "description": "When previous treatment has been unsuccessful, we perform endodontic retreatment to give you a second chance and save the tooth for as long as possible.",
         "features": [
           "Definitive solution",
           "Thorough evaluation",
@@ -141,7 +141,7 @@
       "title": "Not sure which treatment you need?",
       "description": "Schedule a consultation and we'll help you find the best solution",
       "button": {
-        "text": "Free Consultation",
+        "text": "Consultation",
         "phone": "tel:8787828610"
       }
     }
@@ -354,7 +354,7 @@
         "icon": "Phone",
         "title": "Phone",
         "content": "878 782 8610",
-        "subcontent": "Calls and WhatsApp",
+        "subcontent": "Calls",
         "link": "tel:8787828610"
       },
       {
@@ -402,7 +402,7 @@
             "Root Canal Treatment (Endodontics)",
             "Root Canal Retreatment",
             "Apexification",
-            "Dental Revascularization",
+            "Endodontic Regeneration",
             "Internal Bleaching",
             "Infection Evaluation",
             "Dental Trauma",
@@ -438,7 +438,7 @@
       },
       {
         "question": "Is a root canal treatment painful?",
-        "answer": "No, modern root canal treatment is virtually painless. We use effective local anesthesia and advanced technology to ensure your comfort throughout the procedure. Most patients report that the treatment feels similar to a regular dental restoration."
+        "answer": "Modern root canal treatment is virtually painless in most cases. We use effective local anesthesia and advanced technology to ensure your comfort. In cases where there is active infection, the anesthesia may take a little longer to take full effect, but we work to minimize any discomfort. Most patients report that the procedure is more comfortable than they expected."
       },
       {
         "question": "How long does a root canal treatment take?",
@@ -462,7 +462,7 @@
       },
       {
         "question": "Do you accept dental insurance?",
-        "answer": "We work with various insurance providers. Contact us to verify your coverage."
+        "answer": "We accept American dental insurance. Contact us to verify your specific coverage and plan details."
       },
       {
         "question": "Do you treat dental emergencies?",
@@ -511,7 +511,7 @@
       "items": [
         "Endodontics",
         "Apexification",
-        "Revascularization",
+        "Endodontic Regeneration",
         "Internal Whitening",
         "Retreatment"
       ]

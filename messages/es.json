@@ -99,7 +99,7 @@
       {
         "id": 3,
         "icon": "RefreshCw",
-        "title": "Revascularización Dental",
+        "title": "Regeneración endodóntica",
         "subtitle": "Regeneración Biológica",
         "description": "Técnica regenerativa que permite la revitalización de dientes necróticos en pacientes jóvenes, restaurando la función pulpar.",
         "features": [
@@ -121,7 +121,7 @@
         "icon": "RefreshCw",
         "title": "Retratamiento",
         "subtitle": "Segunda Oportunidad",
-        "description": "Cuando un tratamiento previo no fue exitoso, realizamos retratamiento endodóntico para salvar el diente definitivamente.",
+        "description": "Cuando un tratamiento previo no fue exitoso, realizamos retratamiento endodóntico para sarle una segunda oportunidad y rescatar el diente la mayor cantidad de tiempo posible.",
         "features": [
           "Solución definitiva",
           "Evaluación exhaustiva",
@@ -145,7 +145,7 @@
       "title": "¿No estás seguro qué tratamiento necesitas?",
       "description": "Agenda una consulta y te ayudaremos a encontrar la mejor solución",
       "button": {
-        "text": "Consulta Gratuita",
+        "text": "Consulta en línea",
         "phone": "tel:8787828610"
       }
     }
@@ -217,7 +217,6 @@
       "telefono": "8787828610"
     }
   },
-
   "testimonios-section": {
     "header": {
       "badge": "Lo que dicen nuestros pacientes",
@@ -337,7 +336,7 @@
       "years": "14 Años",
       "label": "Salvando Sonrisas"
     },
-    "valores":{
+    "valores": {
       "title": "Nuestros Valores",
       "subtitle": "Los principios que guían cada uno de nuestros tratamientos"
     }
@@ -360,7 +359,7 @@
         "icon": "Phone",
         "title": "Teléfono",
         "content": "878 782 8610",
-        "subcontent": "Llamadas y WhatsApp",
+        "subcontent": "Llamadas",
         "link": "tel:8787828610"
       },
       {
@@ -408,7 +407,7 @@
             "Tratamiento de Conducto (Endodoncia)",
             "Retratamiento de Conducto",
             "Apicoformación",
-            "Revascularización Dental",
+            "Regeneración endodóntica",
             "Blanqueamiento Interno",
             "Evaluación de Infección",
             "Trauma Dental",
@@ -444,7 +443,7 @@
       },
       {
         "question": "¿El tratamiento de conducto es doloroso?",
-        "answer": "No, el tratamiento de conducto moderno es prácticamente indoloro. Utilizamos anestesia local efectiva y tecnología avanzada para asegurar tu comodidad durante todo el procedimiento. La mayoría de los pacientes reportan que el tratamiento es similar a una restauración dental regular."
+        "answer": "El tratamiento de conducto moderno es prácticamente indoloro en la mayoría de los casos. Utilizamos anestesia local efectiva y tecnología avanzada para asegurar tu comodidad. En casos donde existe infección activa, la anestesia puede tardar un poco más en hacer efecto completo, pero trabajamos para minimizar cualquier molestia. La mayoría de los pacientes reportan que el procedimiento es más cómodo de lo que esperaban."
       },
       {
         "question": "¿Cuánto tiempo dura un tratamiento de conducto?",
@@ -468,7 +467,7 @@
       },
       {
         "question": "¿Aceptan seguros dentales?",
-        "answer": "Trabajamos con diversos seguros. Contáctanos para verificar tu cobertura."
+        "answer": "Aceptamos seguros dentales americanos. Contáctanos para verificar tu cobertura específica y los detalles de tu plan."
       },
       {
         "question": "¿Atienden emergencias dentales?",
@@ -520,7 +519,7 @@
       "items": [
         "Endodoncia",
         "Apicoformación",
-        "Revascularización",
+        "Regeneración endodóntica",
         "Blanqueamiento Interno",
         "Retratamiento"
       ]
