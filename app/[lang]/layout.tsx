@@ -33,6 +33,16 @@ export const metadata: Metadata = {
   },
 };
 
+// 👇 Agrega esto para forzar generación estática
+export const dynamic = 'force-static';
+
+export function generateStaticParams() {
+  return [
+    { lang: 'es' },
+    { lang: 'en' },
+  ];
+}
+
 export default async function RootLayout({
   children,
   params,
@@ -40,7 +50,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
 }) {
-  const { lang } = await params; // 👈 OBLIGATORIO en Next 16
+  const { lang } = await params;
   const messages = await getMessages({ locale: lang });
 
   return (
